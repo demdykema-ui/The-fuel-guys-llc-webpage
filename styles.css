@@ -4,14 +4,16 @@
 
 /* --- CSS Variables --- */
 :root {
-  --primary: #0a1628;
-  --primary-light: #152238;
-  --accent: #ff6b35;
-  --accent-hover: #e85a25;
+  --primary: #0a0a0a;
+  --primary-light: #1a1a2e;
+  --accent: #d4a017;
+  --accent-hover: #b8860b;
+  --blue: #1a3a6b;
+  --blue-light: #234d8a;
   --white: #ffffff;
-  --light-gray: #f8f9fa;
-  --text: #333333;
-  --text-light: #666666;
+  --light-gray: #f5f5f0;
+  --text: #222222;
+  --text-light: #555555;
 }
 
 /* --- Reset & Base --- */
@@ -127,9 +129,9 @@ img {
 }
 
 .navbar.scrolled {
-  background-color: var(--primary);
+  background-color: var(--blue);
   padding: 12px 0;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
@@ -180,7 +182,7 @@ img {
 .nav-link:hover,
 .nav-link.active {
   color: var(--white);
-  background-color: rgba(255, 107, 53, 0.15);
+  background-color: rgba(212, 160, 23, 0.15);
 }
 
 .nav-link.active {
@@ -256,10 +258,10 @@ img {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(255, 107, 53, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(255, 107, 53, 0.08) 0%, transparent 40%),
-    radial-gradient(ellipse at 60% 80%, rgba(21, 34, 56, 0.9) 0%, transparent 60%),
-    linear-gradient(135deg, #0a1628 0%, #0d1f3c 25%, #132d50 50%, #0d1f3c 75%, #0a1628 100%);
+    radial-gradient(ellipse at 20% 50%, rgba(212, 160, 23, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(26, 58, 107, 0.3) 0%, transparent 40%),
+    radial-gradient(ellipse at 60% 80%, rgba(10, 10, 10, 0.9) 0%, transparent 60%),
+    linear-gradient(135deg, #0a0a0a 0%, #0d1a2f 25%, #1a3a6b 50%, #0d1a2f 75%, #0a0a0a 100%);
   z-index: 0;
 }
 
@@ -268,8 +270,8 @@ img {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 30% 70%, rgba(255, 107, 53, 0.06) 0%, transparent 50%),
-    linear-gradient(180deg, rgba(10, 22, 40, 0.3) 0%, transparent 30%, transparent 70%, rgba(10, 22, 40, 0.5) 100%);
+    radial-gradient(circle at 30% 70%, rgba(212, 160, 23, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.3) 0%, transparent 30%, transparent 70%, rgba(10, 10, 10, 0.5) 100%);
 }
 
 /* Subtle dot grid pattern overlay */
@@ -290,8 +292,8 @@ img {
     45deg,
     transparent,
     transparent 60px,
-    rgba(255, 107, 53, 0.02) 60px,
-    rgba(255, 107, 53, 0.02) 62px
+    rgba(212, 160, 23, 0.03) 60px,
+    rgba(212, 160, 23, 0.03) 62px
   );
   z-index: 0;
   pointer-events: none;
@@ -407,7 +409,7 @@ img {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
+  box-shadow: 0 6px 20px rgba(212, 160, 23, 0.35);
 }
 
 .btn-outline {
@@ -454,7 +456,7 @@ img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--blue);
   color: var(--white);
   display: flex;
   align-items: center;
@@ -501,7 +503,7 @@ img {
   width: 60px;
   height: 60px;
   border-radius: 14px;
-  background: rgba(255, 107, 53, 0.1);
+  background: rgba(212, 160, 23, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -622,7 +624,7 @@ img {
   height: 90px;
   background: linear-gradient(135deg, var(--primary-light), #1d3350);
   border-radius: 12px;
-  border: 2px solid rgba(255, 107, 53, 0.3);
+  border: 2px solid rgba(212, 160, 23, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -687,7 +689,7 @@ img {
 
 .ring {
   position: absolute;
-  border: 2px solid rgba(255, 107, 53, 0.15);
+  border: 2px solid rgba(212, 160, 23, 0.15);
   border-radius: 50%;
   animation: ringPulse 3s ease-out infinite;
 }
@@ -805,7 +807,7 @@ img {
 }
 
 .testimonial-stars {
-  color: var(--accent);
+  color: #d4a017;
   font-size: 0.95rem;
   margin-bottom: 16px;
   display: flex;
@@ -1047,7 +1049,7 @@ img {
    10. FOOTER
    ============================================ */
 .footer {
-  background-color: #060e1a;
+  background-color: #050505;
   color: rgba(255, 255, 255, 0.7);
   padding: 70px 0 0;
 }
@@ -1219,7 +1221,7 @@ img {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: var(--primary);
+    background: var(--blue);
     flex-direction: column;
     align-items: flex-start;
     padding: 80px 30px 30px;
