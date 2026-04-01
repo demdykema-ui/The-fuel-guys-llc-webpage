@@ -154,13 +154,14 @@ img {
   letter-spacing: 1px;
 }
 
-.nav-logo i {
-  font-size: 1.5rem;
-  color: var(--accent);
+.nav-logo-img {
+  height: 50px;
+  width: auto;
+  transition: height 0.35s ease;
 }
 
-.nav-logo strong {
-  color: var(--accent);
+.navbar.scrolled .nav-logo-img {
+  height: 40px;
 }
 
 .nav-menu {
@@ -1073,13 +1074,9 @@ img {
   margin-bottom: 16px;
 }
 
-.footer-logo i {
-  font-size: 1.3rem;
-  color: var(--accent);
-}
-
-.footer-logo strong {
-  color: var(--accent);
+.footer-logo-img {
+  height: 60px;
+  width: auto;
 }
 
 .footer-brand p {
