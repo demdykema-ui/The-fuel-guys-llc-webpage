@@ -239,14 +239,36 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       if (isValid) {
-        // Hide form fields and show success message
-        var formElements = contactForm.querySelectorAll(
-          '.form-row, .form-group, .btn'
-        );
-        formElements.forEach(function (el) {
-          el.style.display = 'none';
+        // Submit to Formspree
+        var formData = new FormData(contactForm);
+        var submitBtn = contactForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.querySelector('span').textContent = 'Sending...';
+
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(function (response) {
+          if (response.ok) {
+            var formElements = contactForm.querySelectorAll(
+              '.form-row, .form-group, .btn'
+            );
+            formElements.forEach(function (el) {
+              el.style.display = 'none';
+            });
+            formSuccess.style.display = 'block';
+            contactForm.reset();
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.querySelector('span').textContent = 'Send Message';
+            alert('Oops! Something went wrong. Please try again or email us directly.');
+          }
+        }).catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.querySelector('span').textContent = 'Send Message';
+          alert('Oops! Something went wrong. Please try again or email us directly.');
         });
-        formSuccess.style.display = 'block';
       }
     });
   }
