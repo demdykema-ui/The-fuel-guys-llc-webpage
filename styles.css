@@ -155,13 +155,13 @@ img {
 }
 
 .nav-logo-img {
-  height: 50px;
+  height: 70px;
   width: auto;
   transition: height 0.35s ease;
 }
 
 .navbar.scrolled .nav-logo-img {
-  height: 40px;
+  height: 55px;
 }
 
 .nav-menu {
@@ -253,6 +253,16 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: 0;
 }
 
 .hero-bg {
@@ -579,149 +589,80 @@ img {
   letter-spacing: 0.5px;
 }
 
-/* --- Fuel Pump CSS Art --- */
+/* --- About Image --- */
 .about-visual {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.fuel-pump-art {
+.about-image-wrapper {
   position: relative;
-  width: 240px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 480px;
 }
 
-.pump-body {
-  position: relative;
-  width: 140px;
-  height: 220px;
-  background: linear-gradient(160deg, var(--primary-light) 0%, var(--primary) 100%);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  box-shadow: 0 10px 40px rgba(10, 22, 40, 0.4);
-}
-
-.pump-body::after {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 160px;
-  height: 16px;
-  background: var(--primary);
-  border-radius: 0 0 8px 8px;
-}
-
-.pump-screen {
-  width: 90px;
-  height: 90px;
-  background: linear-gradient(135deg, var(--primary-light), #1d3350);
+.about-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
   border-radius: 12px;
-  border: 2px solid rgba(212, 160, 23, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.2rem;
-  color: var(--accent);
-}
-
-.pump-nozzle {
-  position: absolute;
-  top: 28px;
-  right: -40px;
-  width: 40px;
-  height: 14px;
-  background: var(--accent);
-  border-radius: 0 6px 6px 0;
-  z-index: 3;
-}
-
-.pump-nozzle::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  right: -10px;
-  width: 10px;
-  height: 22px;
-  background: var(--accent-hover);
-  border-radius: 0 4px 4px 0;
-}
-
-.pump-hose {
-  position: absolute;
-  top: 42px;
-  right: -25px;
-  width: 8px;
-  height: 100px;
-  background: #2a2a2a;
-  border-radius: 4px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  position: relative;
   z-index: 1;
 }
 
-.pump-hose::after {
+.about-image-accent {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--accent);
+  border-radius: 12px;
+  z-index: 0;
+}
+
+/* ============================================
+   PHOTO BANNER
+   ============================================ */
+.photo-banner {
+  overflow: hidden;
+}
+
+.photo-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.photo-banner-item {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.photo-banner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.photo-banner-item:hover img {
+  transform: scale(1.08);
+}
+
+.photo-banner-item::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: -10px;
-  width: 28px;
-  height: 28px;
-  border: 8px solid #2a2a2a;
-  border-top: none;
-  border-right: none;
-  border-radius: 0 0 0 20px;
-}
-
-/* Animated Rings */
-.pump-rings {
-  position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  transition: opacity 0.3s ease;
 }
 
-.ring {
-  position: absolute;
-  border: 2px solid rgba(212, 160, 23, 0.15);
-  border-radius: 50%;
-  animation: ringPulse 3s ease-out infinite;
-}
-
-.ring-1 {
-  width: 200px;
-  height: 200px;
-  animation-delay: 0s;
-}
-
-.ring-2 {
-  width: 270px;
-  height: 270px;
-  animation-delay: 1s;
-}
-
-.ring-3 {
-  width: 340px;
-  height: 340px;
-  animation-delay: 2s;
-}
-
-@keyframes ringPulse {
-  0% {
-    opacity: 0.6;
-    transform: scale(0.85);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.15);
-  }
+.photo-banner-item:hover::after {
+  opacity: 0.5;
 }
 
 /* ============================================
@@ -1075,7 +1016,7 @@ img {
 }
 
 .footer-logo-img {
-  height: 60px;
+  height: 90px;
   width: auto;
 }
 
@@ -1271,6 +1212,18 @@ img {
     order: -1;
   }
 
+  .about-image {
+    height: 300px;
+  }
+
+  .photo-banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-banner-item {
+    height: 200px;
+  }
+
   .about-stats {
     justify-content: center;
   }
@@ -1338,6 +1291,18 @@ img {
 
   .areas-grid {
     grid-template-columns: 1fr;
+  }
+
+  .photo-banner-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-banner-item {
+    height: 150px;
+  }
+
+  .about-image {
+    height: 250px;
   }
 
   .service-card,
