@@ -779,7 +779,6 @@ img {
    8. TESTIMONIALS
    ============================================ */
 
-/* Eyebrow + Section Header Enhancements */
 .eyebrow {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
@@ -791,279 +790,444 @@ img {
   margin-bottom: 14px;
 }
 
-/* Featured Testimonial */
-.testimonial-featured {
-  background: var(--primary);
-  border-radius: 24px;
-  overflow: hidden;
-  color: var(--white);
-  box-shadow: 0 20px 60px rgba(10, 10, 10, 0.18);
-  margin-bottom: 50px;
+.testimonials .section-subtitle {
+  max-width: 760px;
+  line-height: 1.7;
 }
 
-.testimonial-featured-grid {
+/* --- FEATURED CARD (base) --- */
+.featured {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(10, 10, 10, 0.1);
+  margin-bottom: 40px;
+}
+
+.featured:last-of-type {
+  margin-bottom: 0;
+}
+
+.featured-grid {
   display: grid;
   grid-template-columns: 1fr 360px;
-  gap: 0;
   align-items: stretch;
 }
 
-.testimonial-featured-content {
+.featured-content {
   padding: 60px 56px;
   position: relative;
 }
 
-.testimonial-quote-mark {
+.quote-mark {
   position: absolute;
-  top: 40px;
+  top: 36px;
   left: 56px;
-  width: 56px;
-  height: 42px;
+  width: 52px;
+  height: 40px;
 }
 
-.testimonial-quote-mark svg {
+.quote-mark svg {
   width: 100%;
   height: 100%;
-  fill: var(--accent);
-  opacity: 0.95;
 }
 
-.testimonial-featured-rating {
+.rating {
   display: flex;
   gap: 4px;
   color: var(--accent);
-  font-size: 1.1rem;
-  margin-top: 70px;
+  font-size: 1.05rem;
+  margin-top: 64px;
   margin-bottom: 24px;
 }
 
-.testimonial-featured-quote {
+.featured-quote {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--white);
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   letter-spacing: -0.005em;
 }
 
-.testimonial-featured-quote strong {
+.featured-quote strong {
   font-weight: 700;
-  color: var(--accent);
 }
 
-.testimonial-featured-attribution {
+.attribution {
   display: flex;
   align-items: center;
   gap: 18px;
   padding-top: 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
   flex-wrap: wrap;
 }
 
-.testimonial-avatar {
+.avatar {
   width: 58px;
   height: 58px;
   border-radius: 50%;
   background: var(--accent);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--primary);
+  font-size: 1.25rem;
   flex-shrink: 0;
   letter-spacing: -0.01em;
 }
 
-.testimonial-attribution-text {
+.attribution-text {
   flex-grow: 1;
 }
 
-.testimonial-attribution-name {
+.attribution-name {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--white);
   margin-bottom: 2px;
 }
 
-.testimonial-attribution-role {
+.attribution-role {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 2px;
 }
 
-.testimonial-attribution-company {
+.attribution-company {
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
-  color: var(--accent);
   font-weight: 600;
+  color: var(--accent);
 }
 
-.testimonial-verified-badge {
+.verified-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(212, 160, 23, 0.15);
-  color: var(--accent);
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 20px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  background: rgba(212, 160, 23, 0.15);
+  color: var(--accent-hover);
 }
 
-.testimonial-verified-badge i {
+.verified-badge i {
   font-size: 0.7rem;
 }
 
-/* Featured Sidebar */
-.testimonial-featured-sidebar {
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 60px 38px;
+.credential-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.credential-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+/* --- SIDEBAR (base) --- */
+.featured-sidebar {
+  padding: 56px 38px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.testimonial-sidebar-label {
+.sidebar-label {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
-.testimonial-stat-block {
+.stat-block {
   padding: 18px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.testimonial-stat-block:last-child {
-  border-bottom: none;
+.stat-block:last-child {
+  border-bottom: none !important;
   padding-bottom: 0;
 }
 
-.testimonial-stat-block:first-of-type {
+.stat-block:first-of-type {
   padding-top: 0;
 }
 
-.testimonial-stat-number {
+.featured .stat-number {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   font-weight: 800;
-  color: var(--accent);
+  color: var(--accent-hover);
   line-height: 1;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
 }
 
-.testimonial-stat-label {
+.featured .stat-label {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.72);
   line-height: 1.5;
 }
 
-/* Supporting Testimonials Grid */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+/* ====== DARK variant (XRGG) ====== */
+.featured.dark {
+  background: var(--primary);
+  color: var(--white);
 }
 
-.testimonial-card {
+.featured.dark .quote-mark svg {
+  fill: var(--accent);
+  opacity: 0.95;
+}
+
+.featured.dark .featured-quote {
+  color: var(--white);
+}
+
+.featured.dark .featured-quote strong {
+  color: var(--accent);
+}
+
+.featured.dark .attribution {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.featured.dark .attribution-name {
+  color: var(--white);
+}
+
+.featured.dark .attribution-role {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.featured.dark .verified-badge {
+  background: rgba(212, 160, 23, 0.15);
+  color: var(--accent);
+}
+
+.featured.dark .credential-tag {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.featured.dark .featured-sidebar {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.featured.dark .sidebar-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.featured.dark .stat-block {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.featured.dark .stat-number {
+  color: var(--accent);
+}
+
+.featured.dark .stat-label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ====== LIGHT variant (Nexadata) ====== */
+.featured.light {
   background: var(--white);
-  padding: 36px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  border-left: 4px solid var(--accent);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-stars {
-  color: #d4a017;
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-  display: flex;
-  gap: 3px;
-}
-
-.testimonial-quote {
-  font-style: italic;
   color: var(--text);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  border: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.featured.light .featured-grid {
+  grid-template-columns: 360px 1fr;
+}
+
+.featured.light .quote-mark svg {
+  fill: var(--accent);
+  opacity: 0.85;
+}
+
+.featured.light .featured-quote {
+  color: var(--text);
+}
+
+.featured.light .featured-quote strong {
+  color: var(--accent-hover);
+}
+
+.featured.light .attribution {
+  border-top: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.featured.light .avatar {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.featured.light .attribution-name {
+  color: var(--primary);
+}
+
+.featured.light .attribution-role {
+  color: var(--text-light);
+}
+
+.featured.light .attribution-company {
+  color: var(--accent-hover);
+}
+
+.featured.light .verified-badge {
+  background: rgba(212, 160, 23, 0.15);
+  color: var(--accent-hover);
+}
+
+.featured.light .credential-tag {
+  background: var(--light-gray);
+  color: var(--text-light);
+  border: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.featured.light .featured-sidebar {
+  background: var(--light-gray);
+  border-right: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.featured.light .sidebar-label {
+  color: var(--text-light);
+}
+
+.featured.light .stat-block {
+  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.featured.light .stat-number {
+  color: var(--accent-hover);
+}
+
+.featured.light .stat-label {
+  color: var(--text-light);
+}
+
+/* ====== ACCENT variant (Eastside Kosher Deli) ====== */
+.featured.accent {
+  background: var(--white);
+  color: var(--text);
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-left: 6px solid var(--accent);
+}
+
+.featured.accent .featured-grid {
+  grid-template-columns: 1fr 320px;
+}
+
+.featured.accent .quote-mark svg {
+  fill: var(--accent);
+  opacity: 0.7;
+}
+
+.featured.accent .featured-quote {
+  color: var(--text);
+}
+
+.featured.accent .featured-quote strong {
+  color: var(--accent-hover);
+}
+
+.featured.accent .attribution {
+  border-top: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.featured.accent .avatar {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.featured.accent .attribution-name {
+  color: var(--primary);
+}
+
+.featured.accent .attribution-role {
+  color: var(--text-light);
+}
+
+.featured.accent .verified-badge {
+  background: rgba(212, 160, 23, 0.15);
+  color: var(--accent-hover);
+}
+
+.featured.accent .credential-tag {
+  background: var(--light-gray);
+  color: var(--text-light);
+  border: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.featured.accent .featured-sidebar {
+  background: transparent;
+  border-left: 1px solid rgba(10, 10, 10, 0.08);
+  padding: 48px 34px;
+}
+
+.featured.accent .sidebar-label {
+  color: var(--text-light);
+}
+
+.featured.accent .stat-block {
+  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.featured.accent .stat-number {
+  color: var(--accent-hover);
+  font-size: 1.2rem;
+}
+
+.featured.accent .stat-label {
+  color: var(--text-light);
+}
+
+/* Business card (Eastside Kosher Deli sidebar) */
+.business-card {
+  background: var(--light-gray);
+  border-radius: 10px;
+  padding: 18px;
   margin-bottom: 24px;
 }
 
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.author-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.business-card-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.business-card-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
   font-weight: 700;
-  flex-shrink: 0;
-}
-
-.testimonial-author strong {
-  display: block;
-  font-size: 0.95rem;
   color: var(--primary);
+  margin-bottom: 2px;
 }
 
-.testimonial-author span {
+.business-card-detail {
   font-size: 0.85rem;
   color: var(--text-light);
-}
-
-/* Testimonials Placeholder */
-.testimonials-placeholder {
-  text-align: center;
-  padding: 40px 20px 20px;
-}
-
-.testimonials-quote-icon {
-  font-size: 3rem;
-  color: var(--accent);
-  opacity: 0.35;
-  margin-bottom: 24px;
-  display: block;
-}
-
-.testimonials-placeholder-main {
-  font-size: 1.2rem;
-  color: var(--text);
-  font-weight: 500;
-  max-width: 520px;
-  margin: 0 auto 14px;
-}
-
-.testimonials-placeholder-sub {
-  font-size: 0.95rem;
-  color: var(--text-light);
-  font-style: italic;
 }
 
 /* ============================================
@@ -1537,48 +1701,71 @@ img {
 
   /* Grids */
   .services-grid,
-  .features-grid,
-  .testimonials-grid {
+  .features-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Featured Testimonial */
-  .testimonial-featured-grid {
+  /* Featured Testimonials (all variants) */
+  .featured-grid,
+  .featured.light .featured-grid,
+  .featured.accent .featured-grid {
     grid-template-columns: 1fr;
   }
 
-  .testimonial-featured-content {
+  .featured.light .featured-sidebar {
+    order: 2;
+  }
+
+  .featured-content {
     padding: 48px 32px;
   }
 
-  .testimonial-featured-quote {
+  .featured-quote {
     font-size: 1.05rem;
   }
 
-  .testimonial-quote-mark {
+  .quote-mark {
     top: 32px;
     left: 32px;
     width: 44px;
     height: 34px;
   }
 
-  .testimonial-featured-rating {
+  .rating {
     margin-top: 58px;
   }
 
-  .testimonial-featured-sidebar {
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  .featured-sidebar {
     padding: 40px 32px;
   }
 
-  .testimonial-featured-attribution {
+  .featured.dark .featured-sidebar {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .featured.light .featured-sidebar {
+    border-right: none;
+    border-top: 1px solid rgba(10, 10, 10, 0.08);
+  }
+
+  .featured.accent .featured-sidebar {
+    border-left: none;
+    border-top: 1px solid rgba(10, 10, 10, 0.08);
+    padding: 40px 32px;
+  }
+
+  .attribution {
     flex-wrap: wrap;
     gap: 14px;
   }
 
-  .testimonial-stat-number {
-    font-size: 1.7rem;
+  .featured .stat-number {
+    font-size: 1.55rem;
+  }
+
+  .featured.accent .stat-number {
+    font-size: 1.1rem;
   }
 
   .about-grid {
@@ -1649,29 +1836,38 @@ img {
     font-size: 0.95rem;
   }
 
-  /* Featured Testimonial - Small Mobile */
-  .testimonial-featured {
+  /* Featured Testimonials - Small Mobile */
+  .featured {
     border-radius: 16px;
   }
 
-  .testimonial-featured-content {
+  .featured-content {
     padding: 40px 24px;
   }
 
-  .testimonial-featured-quote {
+  .featured-quote {
     font-size: 1rem;
   }
 
-  .testimonial-featured-sidebar {
+  .featured-sidebar {
     padding: 32px 24px;
   }
 
-  .testimonial-attribution-text {
+  .attribution-text {
     flex: 1 1 100%;
   }
 
-  .testimonial-stat-number {
-    font-size: 1.5rem;
+  .featured .stat-number {
+    font-size: 1.35rem;
+  }
+
+  .featured.accent .stat-number {
+    font-size: 1rem;
+  }
+
+  .credential-tag {
+    font-size: 0.62rem;
+    padding: 5px 10px;
   }
 
   .hero-title {
