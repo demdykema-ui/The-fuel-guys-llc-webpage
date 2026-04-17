@@ -126,7 +126,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ===== ANIMATED NUMBER COUNTERS =====
-  var statNumbers = document.querySelectorAll('.stat-number');
+  // Only animate elements with a data-target attribute (e.g. About section stats).
+  // Testimonial stat-numbers contain non-numeric text like "Multi-site", "6 AM", "$0".
+  var statNumbers = document.querySelectorAll('.stat-number[data-target]');
 
   function formatNumber(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
