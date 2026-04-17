@@ -877,6 +877,10 @@ img {
   letter-spacing: -0.01em;
 }
 
+.avatar-photo {
+  object-fit: cover;
+}
+
 .attribution-text {
   flex-grow: 1;
 }
