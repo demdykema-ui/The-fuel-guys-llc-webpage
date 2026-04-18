@@ -1694,13 +1694,22 @@ img {
     font-size: 1.6rem;
   }
 
-  /* Photo Banner */
+  /* Photo Banner - Mobile */
   .photo-banner-grid {
     grid-template-columns: 1fr;
   }
 
   .photo-banner-item {
-    height: 220px;
+    height: 260px;
+  }
+
+  /* Always show captions on touch devices (no hover) */
+  .photo-banner-caption {
+    transform: translateY(0);
+  }
+
+  .photo-banner-item::after {
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.4) 40%, rgba(10, 10, 10, 0.15) 100%);
   }
 
   /* Grids */
@@ -1792,14 +1801,6 @@ img {
 
   .about-image {
     height: 300px;
-  }
-
-  .photo-banner-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .photo-banner-item {
-    height: 200px;
   }
 
   .about-stats {
@@ -1906,7 +1907,7 @@ img {
   }
 
   .photo-banner-item {
-    height: 180px;
+    height: 220px;
   }
 
   .photo-banner-caption {
