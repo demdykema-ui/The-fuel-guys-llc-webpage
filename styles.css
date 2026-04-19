@@ -716,89 +716,87 @@ img {
 }
 
 /* ============================================
-   BILINGUAL BANNER
+   TAGLINE BANNER
    ============================================ */
-.bilingual-banner {
-  padding: 40px 0;
+.tagline-banner {
+  padding: 70px 0;
   background: var(--primary);
   color: var(--white);
-  border-top: 3px solid var(--accent);
-  border-bottom: 3px solid var(--accent);
+  position: relative;
+  overflow: hidden;
 }
 
-.bilingual-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+.tagline-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
 }
 
-.bilingual-en,
-.bilingual-es {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex: 1;
-  min-width: 280px;
+.tagline-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
 }
 
-.bilingual-en i {
-  font-size: 1.8rem;
+.tagline-content {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.tagline-primary {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.tagline-primary span {
   color: var(--accent);
-  flex-shrink: 0;
 }
 
-.bilingual-flag {
-  width: 30px;
-  height: 20px;
-  border-radius: 3px;
-  flex-shrink: 0;
-}
-
-.bilingual-en p,
-.bilingual-es p {
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
+.tagline-secondary {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
   margin: 0;
 }
 
-.bilingual-en strong,
-.bilingual-es strong {
+.tagline-secondary em {
   color: var(--accent);
-  font-weight: 700;
-}
-
-.bilingual-divider {
-  width: 2px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.15);
-  flex-shrink: 0;
+  font-style: normal;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
-  .bilingual-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
+  .tagline-banner {
+    padding: 50px 0;
   }
 
-  .bilingual-en,
-  .bilingual-es {
-    flex-direction: column;
-    gap: 10px;
-    min-width: auto;
+  .tagline-primary {
+    font-size: 1.8rem;
   }
 
-  .bilingual-divider {
-    width: 60px;
-    height: 2px;
+  .tagline-secondary {
+    font-size: 1rem;
   }
+}
 
-  .bilingual-en p,
-  .bilingual-es p {
-    font-size: 0.95rem;
+@media (max-width: 480px) {
+  .tagline-primary {
+    font-size: 1.5rem;
   }
 }
 
