@@ -716,6 +716,93 @@ img {
 }
 
 /* ============================================
+   BILINGUAL BANNER
+   ============================================ */
+.bilingual-banner {
+  padding: 40px 0;
+  background: var(--primary);
+  color: var(--white);
+  border-top: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+.bilingual-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.bilingual-en,
+.bilingual-es {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.bilingual-en i {
+  font-size: 1.8rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.bilingual-flag {
+  width: 30px;
+  height: 20px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.bilingual-en p,
+.bilingual-es p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.bilingual-en strong,
+.bilingual-es strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.bilingual-divider {
+  width: 2px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .bilingual-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .bilingual-en,
+  .bilingual-es {
+    flex-direction: column;
+    gap: 10px;
+    min-width: auto;
+  }
+
+  .bilingual-divider {
+    width: 60px;
+    height: 2px;
+  }
+
+  .bilingual-en p,
+  .bilingual-es p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
    7. SERVICE AREAS
    ============================================ */
 .areas {
