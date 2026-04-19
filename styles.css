@@ -861,6 +861,257 @@ img {
 }
 
 /* ============================================
+   DELIVERY GUARANTEE
+   ============================================ */
+.guarantee {
+  background: var(--light-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.guarantee::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212, 160, 23, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.guarantee::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(26, 58, 107, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.guarantee .container {
+  position: relative;
+  z-index: 1;
+}
+
+.guarantee-title {
+  max-width: 780px;
+  margin: 0 auto 15px;
+}
+
+.guarantee-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.guarantee-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 48px 40px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(10, 10, 10, 0.08);
+  border: 1px solid rgba(10, 10, 10, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.guarantee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(10, 10, 10, 0.12);
+}
+
+/* Featured (emergency) variant - dark background */
+.guarantee-card.featured {
+  background: var(--primary);
+  color: var(--white);
+  border: 1px solid var(--primary);
+}
+
+.guarantee-card.featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent);
+}
+
+.guarantee-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(212, 160, 23, 0.12);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 1.8rem;
+}
+
+.guarantee-card.featured .guarantee-icon {
+  background: rgba(212, 160, 23, 0.15);
+  color: var(--accent);
+}
+
+.guarantee-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+  padding: 6px 16px;
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.guarantee-card.featured .guarantee-badge {
+  color: var(--accent);
+  border-color: rgba(212, 160, 23, 0.4);
+  background: rgba(212, 160, 23, 0.1);
+}
+
+.guarantee-window {
+  margin-bottom: 20px;
+}
+
+.guarantee-number {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 4px;
+}
+
+.guarantee-unit {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.guarantee-card.featured .guarantee-unit {
+  color: var(--white);
+}
+
+.guarantee-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin-bottom: 28px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guarantee-card.featured .guarantee-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.guarantee-description strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.guarantee-card.featured .guarantee-description strong {
+  color: var(--white);
+}
+
+.guarantee-promise {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  background: var(--light-gray);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+  border: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.guarantee-card.featured .guarantee-promise {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.guarantee-promise i {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.guarantee-promise strong {
+  color: var(--accent-hover);
+  font-weight: 700;
+}
+
+.guarantee-card.featured .guarantee-promise strong {
+  color: var(--accent);
+}
+
+.guarantee-footer {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-light);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.guarantee-footer i {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .guarantee-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .guarantee-card {
+    padding: 40px 28px;
+  }
+
+  .guarantee-number {
+    font-size: 4.5rem;
+  }
+
+  .guarantee-footer {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .guarantee-number {
+    font-size: 3.8rem;
+  }
+
+  .guarantee-unit {
+    font-size: 0.95rem;
+  }
+
+  .guarantee-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* ============================================
    8. TESTIMONIALS
    ============================================ */
 
