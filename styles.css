@@ -16,6 +16,39 @@
   --text-light: #555555;
 }
 
+/* --- Screen Reader Only (Skip Nav) --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: auto;
+  padding: 12px 24px;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  background: var(--accent);
+  color: var(--primary);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* --- Reset & Base --- */
 *,
 *::before,
