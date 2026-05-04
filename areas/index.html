@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Areas | Diesel Delivery in Denver, Aurora, Lakewood & More</title>
+  <meta name="description" content="The Fuel Guys LLC delivers diesel and DEF throughout the Denver metro area including Aurora, Lakewood, Thornton, Arvada, Westminster, Boulder, and more.">
+  <meta name="keywords" content="diesel delivery Denver, fuel delivery Aurora, diesel Lakewood, fuel delivery Thornton, diesel Arvada, fuel delivery Westminster, diesel Boulder, Denver metro fuel">
+  <meta name="author" content="The Fuel Guys LLC">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="apple-touch-icon" href="/logo.svg">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Service Areas | Diesel Delivery in Denver, Aurora, Lakewood & More">
+  <meta property="og:description" content="The Fuel Guys LLC delivers diesel and DEF throughout the Denver metro area including Aurora, Lakewood, Thornton, Arvada, Westminster, Boulder, and more.">
+  <meta property="og:image" content="/logo.svg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Service Areas | Diesel Delivery in Denver Metro">
+  <meta name="twitter:description" content="The Fuel Guys LLC delivers diesel and DEF throughout the Denver metro area and Front Range.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Google Ads Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17068803887"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17068803887');
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17068803887/YOUR_CONVERSION_LABEL',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
+  <style>
+    /* ===== PAGE HERO (subpage variant) ===== */
+    .page-hero {
+      position: relative;
+      height: 40vh;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(212, 160, 23, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(26, 58, 107, 0.3) 0%, transparent 40%),
+        radial-gradient(ellipse at 60% 80%, rgba(10, 10, 10, 0.9) 0%, transparent 60%),
+        linear-gradient(135deg, #0a0a0a 0%, #0d1a2f 25%, #1a3a6b 50%, #0d1a2f 75%, #0a0a0a 100%);
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 60px,
+        rgba(212, 160, 23, 0.03) 60px,
+        rgba(212, 160, 23, 0.03) 62px
+      );
+      pointer-events: none;
+    }
+
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #ffffff;
+      padding: 0 20px;
+      max-width: 860px;
+    }
+
+    .page-hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .page-hero-subtitle {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ===== COVERAGE INTRO ===== */
+    .coverage-intro {
+      padding: 80px 0 60px;
+      background-color: #ffffff;
+    }
+
+    .coverage-intro-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .coverage-intro-inner h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a0a0a;
+      margin-bottom: 15px;
+    }
+
+    .coverage-intro-inner .section-underline {
+      margin: 0 auto 20px;
+    }
+
+    .coverage-intro-inner p {
+      font-size: 1.1rem;
+      color: #555555;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .coverage-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: rgba(26, 58, 107, 0.08);
+      border: 1px solid rgba(26, 58, 107, 0.15);
+      border-radius: 30px;
+      margin-top: 12px;
+    }
+
+    .coverage-badge i {
+      color: #1a3a6b;
+      font-size: 1.1rem;
+    }
+
+    .coverage-badge span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1a3a6b;
+    }
+
+    /* ===== AREAS GRID (expanded) ===== */
+    .areas-expanded {
+      padding: 0 0 80px;
+      background-color: #ffffff;
+    }
+
+    .areas-expanded-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .areas-expanded-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .area-card {
+      background: #ffffff;
+      border: 1px solid rgba(10, 10, 10, 0.06);
+      border-left: 4px solid #d4a017;
+      border-radius: 0 10px 10px 0;
+      padding: 28px 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .area-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .area-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .area-card-header i {
+      color: #d4a017;
+      font-size: 1rem;
+    }
+
+    .area-card-header h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0a0a0a;
+    }
+
+    .area-card p {
+      font-size: 0.92rem;
+      color: #555555;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ===== DON'T SEE YOUR AREA ===== */
+    .area-expand {
+      padding: 60px 0 80px;
+      background-color: #f5f5f0;
+    }
+
+    .area-expand-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .area-expand-inner .expand-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: rgba(212, 160, 23, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 1.6rem;
+      color: #d4a017;
+    }
+
+    .area-expand-inner h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0a0a0a;
+      margin-bottom: 14px;
+    }
+
+    .area-expand-inner p {
+      font-size: 1.05rem;
+      color: #555555;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .btn-expand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      background-color: #d4a017;
+      color: #ffffff;
+      border: 2px solid #d4a017;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-expand:hover {
+      background-color: #b8860b;
+      border-color: #b8860b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 160, 23, 0.35);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .areas-expanded-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-hero-title {
+        font-size: 2.2rem;
+      }
+
+      .page-hero-subtitle {
+        font-size: 1.05rem;
+      }
+
+      .coverage-intro {
+        padding: 60px 0 40px;
+      }
+
+      .coverage-intro-inner h2 {
+        font-size: 1.7rem;
+      }
+
+      .areas-expanded {
+        padding: 0 0 60px;
+      }
+
+      .areas-expanded-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .area-expand {
+        padding: 50px 0 60px;
+      }
+
+      .area-expand-inner h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-hero {
+        min-height: 260px;
+      }
+
+      .page-hero-title {
+        font-size: 1.8rem;
+      }
+
+      .areas-expanded-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .area-card {
+        padding: 22px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.svg" alt="The Fuel Guys LLC" class="nav-logo-img">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/services/" class="nav-link">Services</a></li>
+        <li><a href="/about/" class="nav-link">About</a></li>
+        <li><a href="/areas/" class="nav-link active">Service Areas</a></li>
+        <li><a href="/contact/" class="nav-link">Contact</a></li>
+        <li><a href="/facts/" class="nav-link">Facts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero-content fade-in">
+      <h1 class="page-hero-title">Areas We Serve</h1>
+      <p class="page-hero-subtitle">Proudly serving the Denver metro and Front Range &mdash; and expanding across Colorado</p>
+    </div>
+  </section>
+
+  <!-- ===== COVERAGE INTRO ===== -->
+  <section class="coverage-intro fade-in">
+    <div class="coverage-intro-inner">
+      <h2>Denver Metro Diesel Delivery</h2>
+      <div class="section-underline"></div>
+      <p>The Fuel Guys LLC provides on-site diesel and DEF delivery throughout the greater Denver metropolitan area. Our service footprint covers a 25-mile radius from the Denver core, reaching the communities where Colorado's businesses build, operate, and grow.</p>
+      <p>From downtown construction sites to suburban fleet yards, from industrial parks to commercial facilities along the Front Range, we deliver wherever your equipment needs fuel. Our drivers know these roads and these communities &mdash; because we live and work here too.</p>
+      <div class="coverage-badge">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>25-mile radius from Denver core</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AREAS GRID ===== -->
+  <section class="areas-expanded fade-in">
+    <div class="areas-expanded-inner">
+      <div class="areas-expanded-grid">
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Denver</h3>
+          </div>
+          <p>Our home base. We serve construction sites, commercial fleets, restaurants, data centers, and businesses across every Denver neighborhood.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Aurora</h3>
+          </div>
+          <p>Fuel delivery for Aurora's growing industrial corridors, distribution centers, and commercial operations along the I-225 and E-470 corridors.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Lakewood</h3>
+          </div>
+          <p>Serving Lakewood's business parks, fleet operators, and construction projects from the Federal Center area to the foothills.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Thornton</h3>
+          </div>
+          <p>Reliable diesel delivery for Thornton's rapidly expanding commercial and residential construction projects along I-25 north.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Arvada</h3>
+          </div>
+          <p>Fueling Arvada's contractors, equipment operators, and commercial fleets from Olde Town to the Candelas development and beyond.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Westminster</h3>
+          </div>
+          <p>On-site fuel service for Westminster's business community, including the Orchard district, industrial zones, and new development areas.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Centennial</h3>
+          </div>
+          <p>Diesel and DEF delivery for Centennial's office parks, fleet facilities, and commercial operations in the south metro corridor.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Highlands Ranch</h3>
+          </div>
+          <p>Serving the Highlands Ranch business community with scheduled and emergency fuel delivery for commercial and construction operations.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Boulder</h3>
+          </div>
+          <p>Fuel delivery for Boulder's construction projects, university operations, tech campus facilities, and commercial fleet operators.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Littleton</h3>
+          </div>
+          <p>Reliable on-site fueling for Littleton's businesses, from the Santa Fe corridor to the Ken Caryl and Chatfield areas.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Commerce City</h3>
+          </div>
+          <p>A major hub for our deliveries. We fuel Commerce City's industrial operations, refineries, logistics yards, and heavy equipment sites.</p>
+        </div>
+
+        <div class="area-card">
+          <div class="area-card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Brighton</h3>
+          </div>
+          <p>Serving Brighton's agricultural operations, construction sites, and growing commercial corridor with scheduled and on-demand delivery.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DON'T SEE YOUR AREA ===== -->
+  <section class="area-expand fade-in">
+    <div class="area-expand-inner">
+      <div class="expand-icon">
+        <i class="fas fa-search-location"></i>
+      </div>
+      <h2>Don't See Your Area?</h2>
+      <p>We're always expanding our service territory across the Front Range and beyond. If your business is outside our current coverage area, give us a call &mdash; we may already deliver to your location, or we can work with you to set up service. No area is too far if the need is right.</p>
+      <a href="/contact/" class="btn-expand"><i class="fas fa-paper-plane"></i> Contact Us About Your Location</a>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-content fade-in">
+        <div class="cta-banner-text">
+          <h2>Ready to Simplify Your Fuel Supply?</h2>
+          <p>One call is all it takes. Let The Fuel Guys handle your diesel and DEF so you can focus on what you do best.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="tel:7207361614" class="btn btn-primary" onclick="return gtag_report_conversion('tel:7207361614');"><i class="fas fa-phone-alt"></i> (720) 736-1614</a>
+          <a href="/contact/" class="btn btn-outline">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <img src="/logo.svg" alt="The Fuel Guys LLC" class="footer-logo-img">
+          </a>
+          <p>Innovative fuel solutions for the Denver metro area. We don't just deliver fuel — we're transforming the industry.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/areas/">Service Areas</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/">Diesel Delivery</a></li>
+            <li><a href="/services/">DEF Supply</a></li>
+            <li><a href="/services/">Bulk Fuel Supply</a></li>
+            <li><a href="/services/">Emergency Service</a></li>
+            <li><a href="/services/">Fleet Programs</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone-alt"></i> (720) 736-1614</p>
+          <p><i class="fas fa-envelope"></i> edykema@fuel-guys.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Denver Metropolitan Area<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colorado</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Fuel Guys LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -25,34 +25,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // ===== ACTIVE NAV LINK HIGHLIGHTING =====
+  // ===== ACTIVE NAV LINK HIGHLIGHTING (pathname-based for multi-page) =====
   var navLinks = document.querySelectorAll('.nav-link');
-  var sections = document.querySelectorAll('section[id]');
 
-  function highlightActiveLink() {
-    var scrollPos = window.scrollY + 100;
-
-    sections.forEach(function (section) {
-      var top = section.offsetTop;
-      var height = section.offsetHeight;
-      var id = section.getAttribute('id');
-
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(function (link) {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + id) {
-            link.classList.add('active');
-          }
-        });
+  function setActiveNavLink() {
+    var path = window.location.pathname;
+    navLinks.forEach(function (link) {
+      link.classList.remove('active');
+      var href = link.getAttribute('href');
+      if (path === '/' && (href === '/' || href === '/index.html')) {
+        link.classList.add('active');
+      } else if (href !== '/' && path.indexOf(href) === 0) {
+        link.classList.add('active');
       }
     });
   }
+
+  setActiveNavLink();
 
   // Combined scroll handler
   window.addEventListener('scroll', function () {
     handleNavbarScroll();
     handleScrollIndicator();
-    highlightActiveLink();
   });
 
   // ===== MOBILE MENU TOGGLE =====
@@ -278,5 +272,4 @@ document.addEventListener('DOMContentLoaded', function () {
   // Run handlers once on load in case page is already scrolled
   handleNavbarScroll();
   handleScrollIndicator();
-  highlightActiveLink();
 });
