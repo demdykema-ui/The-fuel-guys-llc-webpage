@@ -91,20 +91,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ===== FADE-IN ANIMATIONS (Intersection Observer) =====
-  var fadeElements = document.querySelectorAll('.fade-in');
+  // ===== FADE-IN / SLIDE / SCALE ANIMATIONS (Intersection Observer) =====
+  var animElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in');
 
   var fadeObserver = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          // Stagger siblings within the same parent
           var parent = entry.target.parentElement;
-          var siblings = parent.querySelectorAll('.fade-in');
+          var siblings = parent.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in');
           var index = Array.prototype.indexOf.call(siblings, entry.target);
 
           if (index > 0) {
-            entry.target.style.transitionDelay = (index * 0.1) + 's';
+            entry.target.style.transitionDelay = (index * 0.12) + 's';
           }
 
           entry.target.classList.add('visible');
@@ -115,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
     { threshold: 0.1 }
   );
 
-  fadeElements.forEach(function (el) {
+  animElements.forEach(function (el) {
     fadeObserver.observe(el);
   });
 
