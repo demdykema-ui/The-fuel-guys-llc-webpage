@@ -2827,7 +2827,204 @@ img {
   line-height: 1.5;
 }
 
-/* --- Sub-page responsive --- */
+/* ============================================
+   SCHEDULE PAGE
+   ============================================ */
+.schedule-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.schedule-step {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-step .step-num {
+  width: 48px;
+  height: 48px;
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 auto 18px;
+}
+
+.schedule-step h3 {
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.schedule-step p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.schedule-disclaimer {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--white);
+  border-left: 4px solid var(--accent);
+  padding: 24px 28px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.schedule-disclaimer i {
+  color: var(--accent);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.schedule-disclaimer div {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.schedule-disclaimer strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+/* --- Schedule form --- */
+.schedule-form-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px 44px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.schedule-form .form-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--primary);
+  margin: 24px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.schedule-form .form-section-title:first-child {
+  margin-top: 0;
+}
+
+.schedule-form .form-section-title i {
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+/* Override contact form dark styling for white background */
+.schedule-form .form-group label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.schedule-form .form-group input,
+.schedule-form .form-group select,
+.schedule-form .form-group textarea {
+  background-color: var(--light-gray);
+  border-color: rgba(10, 10, 10, 0.1);
+  color: var(--text);
+}
+
+.schedule-form .form-group input::placeholder,
+.schedule-form .form-group textarea::placeholder {
+  color: rgba(10, 10, 10, 0.35);
+}
+
+.schedule-form .form-group input:focus,
+.schedule-form .form-group select:focus,
+.schedule-form .form-group textarea:focus {
+  background-color: var(--white);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.1);
+}
+
+.schedule-form .form-group select option {
+  background-color: var(--white);
+  color: var(--text);
+}
+
+.schedule-form .required {
+  color: #c0392b;
+}
+
+.schedule-form .form-success {
+  background-color: rgba(40, 167, 69, 0.1);
+  border-color: rgba(40, 167, 69, 0.3);
+}
+
+.schedule-form .form-success p {
+  color: var(--text);
+}
+
+.form-fineprint {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+.form-fineprint i {
+  color: var(--accent);
+  margin-right: 4px;
+}
+
+@media (max-width: 768px) {
+  .schedule-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .schedule-form-wrapper {
+    padding: 28px 24px;
+  }
+
+  .schedule-disclaimer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule-steps {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 1024px) {
   .facts-grid {
     gap: 20px;
