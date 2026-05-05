@@ -168,105 +168,82 @@ document.addEventListener('DOMContentLoaded', function () {
     counterObserver.observe(el);
   });
 
-  // ===== CONTACT FORM VALIDATION =====
-  var contactForm = document.getElementById('contactForm');
-  var formSuccess = document.getElementById('formSuccess');
+  // ===== FORM SUBMISSION HANDLER (works for all .contact-form forms) =====
+  var allForms = document.querySelectorAll('form.contact-form');
 
-  if (contactForm) {
-    var fields = {
-      name: {
-        input: document.getElementById('name'),
-        error: document.getElementById('nameError'),
-        validate: function (val) {
-          return val.trim() !== '' ? '' : 'Please enter your name.';
-        }
-      },
-      email: {
-        input: document.getElementById('email'),
-        error: document.getElementById('emailError'),
-        validate: function (val) {
-          if (val.trim() === '') return 'Please enter your email address.';
-          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return emailRegex.test(val) ? '' : 'Please enter a valid email address.';
-        }
-      },
-      phone: {
-        input: document.getElementById('phone'),
-        error: document.getElementById('phoneError'),
-        validate: function (val) {
-          return val.trim() !== '' ? '' : 'Please enter your phone number.';
-        }
-      },
-      message: {
-        input: document.getElementById('message'),
-        error: document.getElementById('messageError'),
-        validate: function (val) {
-          return val.trim() !== '' ? '' : 'Please enter a message.';
-        }
-      }
-    };
+  allForms.forEach(function (form) {
+    var formSuccess = form.querySelector('.form-success');
 
-    // Clear error styling on input focus
-    Object.keys(fields).forEach(function (key) {
-      var field = fields[key];
-      field.input.addEventListener('focus', function () {
-        field.input.classList.remove('input-error');
-        field.error.textContent = '';
-      });
-    });
-
-    contactForm.addEventListener('submit', function (e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var isValid = true;
 
-      Object.keys(fields).forEach(function (key) {
-        var field = fields[key];
-        var errorMsg = field.validate(field.input.value);
-
-        if (errorMsg) {
-          isValid = false;
-          field.error.textContent = errorMsg;
-          field.input.classList.add('input-error');
-        } else {
-          field.error.textContent = '';
-          field.input.classList.remove('input-error');
-        }
-      });
-
-      if (isValid) {
-        // Submit to Formspree
-        var formData = new FormData(contactForm);
-        var submitBtn = contactForm.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.querySelector('span').textContent = 'Sending...';
-
-        fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        }).then(function (response) {
-          if (response.ok) {
-            var formElements = contactForm.querySelectorAll(
-              '.form-row, .form-group, .btn'
-            );
-            formElements.forEach(function (el) {
-              el.style.display = 'none';
-            });
-            formSuccess.style.display = 'block';
-            contactForm.reset();
-          } else {
-            submitBtn.disabled = false;
-            submitBtn.querySelector('span').textContent = 'Send Message';
-            alert('Oops! Something went wrong. Please try again or email us directly.');
-          }
-        }).catch(function () {
-          submitBtn.disabled = false;
-          submitBtn.querySelector('span').textContent = 'Send Message';
-          alert('Oops! Something went wrong. Please try again or email us directly.');
-        });
+      // Validate required fields (browser HTML5 validation)
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
       }
+
+      // Email validation
+      var emailInput = form.querySelector('input[type="email"]');
+      if (emailInput && emailInput.value.trim() !== '') {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+          emailInput.classList.add('input-error');
+          var errSpan = form.querySelector('#emailError');
+          if (errSpan) errSpan.textContent = 'Please enter a valid email address.';
+          emailInput.focus();
+          return;
+        }
+      }
+
+      // Submit to Formspree via AJAX
+      var formData = new FormData(form);
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var btnSpan = submitBtn ? submitBtn.querySelector('span') : null;
+      var originalText = btnSpan ? btnSpan.textContent : 'Sending...';
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnSpan) btnSpan.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          // If form has a _next redirect URL, go there for conversion tracking
+          var nextInput = form.querySelector('input[name="_next"]');
+          if (nextInput && nextInput.value) {
+            window.location.href = nextInput.value;
+            return;
+          }
+          // Otherwise show inline success message
+          var formElements = form.querySelectorAll('.form-row, .form-group, .btn, .form-fineprint, .form-section-title');
+          formElements.forEach(function (el) { el.style.display = 'none'; });
+          if (formSuccess) formSuccess.style.display = 'block';
+          form.reset();
+        } else {
+          if (submitBtn) submitBtn.disabled = false;
+          if (btnSpan) btnSpan.textContent = originalText;
+          alert('Oops! Something went wrong. Please try again or call us at (720) 736-1614.');
+        }
+      }).catch(function () {
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnSpan) btnSpan.textContent = originalText;
+        alert('Oops! Something went wrong. Please try again or call us at (720) 736-1614.');
+      });
     });
-  }
+
+    // Clear error styling on focus
+    form.querySelectorAll('input, textarea, select').forEach(function (input) {
+      input.addEventListener('focus', function () {
+        input.classList.remove('input-error');
+        var errId = input.id + 'Error';
+        var errSpan = form.querySelector('#' + errId);
+        if (errSpan) errSpan.textContent = '';
+      });
+    });
+  });
 
   // Run handlers once on load in case page is already scrolled
   handleNavbarScroll();

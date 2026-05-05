@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18103692761"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18103692761');
+
+    // Conversion: Customer scheduled an appointment
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18103692761/UDtFCNGgjqMcENnbwbhD',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_category': 'Service Signup',
+      'event_label': 'Service Signup Completed'
+    });
+  </script>
+
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') { window.location = url; }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18103692761/UDtFCNGgjqMcENnbwbhD',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
+  <title>Welcome to Rewards | The Fuel Guys LLC</title>
+  <meta name="description" content="You've signed up for The Fuel Guys Rewards program. Your points start counting from your next delivery.">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.svg" alt="The Fuel Guys LLC" class="nav-logo-img">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/services/" class="nav-link">Services</a></li>
+        <li><a href="/about/" class="nav-link">About</a></li>
+        <li><a href="/areas/" class="nav-link">Service Areas</a></li>
+        <li><a href="/schedule/" class="nav-link">Schedule</a></li>
+        <li><a href="/contact/" class="nav-link">Contact</a></li>
+        <li><a href="/facts/" class="nav-link">Facts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="thank-you-page">
+    <div class="container">
+      <div class="thank-you-content">
+        <div class="thank-you-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <span class="eyebrow">Welcome to Rewards</span>
+        <h1 class="thank-you-title">You're a <span>Founding Member!</span></h1>
+        <p class="thank-you-message">
+          Thanks for joining The Fuel Guys Rewards program. Your account is being set up &mdash; your points start counting on your next delivery.
+        </p>
+
+        <div class="thank-you-steps">
+          <h3>What happens next:</h3>
+          <ol>
+            <li><i class="fas fa-user-check"></i> We create your rewards account and assign you a member ID</li>
+            <li><i class="fas fa-bolt"></i> You're locked in as a Founding Member &mdash; bonus points + lifetime perks at launch</li>
+            <li><i class="fas fa-gas-pump"></i> Every gallon you order from now on counts toward your point balance</li>
+            <li><i class="fas fa-envelope"></i> We'll email you the moment the rewards portal goes live</li>
+          </ol>
+        </div>
+
+        <div class="thank-you-cta">
+          <p>Need it urgent? Call us directly:</p>
+          <a href="tel:7207361614" class="btn btn-primary" onclick="return gtag_report_conversion('tel:7207361614');"><i class="fas fa-phone-alt"></i> (720) 736-1614</a>
+          <a href="/" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding: 24px 0;">
+        <p>&copy; 2026 The Fuel Guys LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

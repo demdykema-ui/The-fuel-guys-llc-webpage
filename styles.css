@@ -2828,6 +2828,155 @@ img {
 }
 
 /* ============================================
+   THANK YOU PAGES
+   ============================================ */
+.thank-you-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 20px 60px;
+  background: linear-gradient(135deg, var(--light-gray) 0%, #fff 100%);
+}
+
+.thank-you-content {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--white);
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(10, 10, 10, 0.08);
+  border-top: 6px solid var(--accent);
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.thank-you-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(212, 160, 23, 0.12);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 2.6rem;
+  animation: scaleIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.thank-you-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.thank-you-title span {
+  color: var(--accent);
+}
+
+.thank-you-message {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thank-you-steps {
+  text-align: left;
+  background: var(--light-gray);
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin-bottom: 36px;
+}
+
+.thank-you-steps h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+  margin-bottom: 18px;
+}
+
+.thank-you-steps ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.thank-you-steps ol li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+  font-size: 0.98rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.thank-you-steps ol li:last-child {
+  border-bottom: none;
+}
+
+.thank-you-steps ol li i {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin-top: 3px;
+  width: 22px;
+  flex-shrink: 0;
+}
+
+.thank-you-cta p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 18px;
+}
+
+.thank-you-cta .btn {
+  margin: 6px;
+}
+
+@media (max-width: 768px) {
+  .thank-you-page {
+    padding: 110px 16px 40px;
+  }
+
+  .thank-you-content {
+    padding: 44px 28px;
+  }
+
+  .thank-you-title {
+    font-size: 1.8rem;
+  }
+
+  .thank-you-message {
+    font-size: 1rem;
+  }
+
+  .thank-you-steps {
+    padding: 22px 20px;
+  }
+
+  .thank-you-steps ol li {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================
    SCHEDULE PAGE
    ============================================ */
 .schedule-steps {

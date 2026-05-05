@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18103692761"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18103692761');
+  </script>
+
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') { window.location = url; }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18103692761/UDtFCNGgjqMcENnbwbhD',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
+  <title>Request a Quote | The Fuel Guys LLC | Denver Diesel Delivery</title>
+  <meta name="description" content="Request a free, no-obligation quote for diesel, DEF, or bulk fuel delivery in the Denver metro area. Transparent pricing, no hidden fees.">
+  <meta name="keywords" content="diesel quote Denver, fuel delivery quote, DEF pricing, bulk fuel quote Colorado">
+
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <a href="#quoteForm" class="sr-only">Skip to main content</a>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.svg" alt="The Fuel Guys LLC" class="nav-logo-img">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/services/" class="nav-link">Services</a></li>
+        <li><a href="/about/" class="nav-link">About</a></li>
+        <li><a href="/areas/" class="nav-link">Service Areas</a></li>
+        <li><a href="/schedule/" class="nav-link">Schedule</a></li>
+        <li><a href="/contact/" class="nav-link">Contact</a></li>
+        <li><a href="/facts/" class="nav-link">Facts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-badge" style="margin-bottom: 18px;">
+        <i class="fas fa-file-invoice-dollar"></i> Free &middot; No Obligation
+      </span>
+      <h1 class="page-hero-title">Request a <span>Quote</span></h1>
+      <p class="page-hero-subtitle">Tell us what you need. We'll send you a transparent, all-in price &mdash; usually within an hour.</p>
+    </div>
+  </section>
+
+  <section class="section schedule-form-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="eyebrow">Get Your Quote</span>
+        <h2 class="section-title">Quick Quote Request</h2>
+        <div class="section-underline"></div>
+        <p class="section-subtitle">Transparent pricing. No hidden fees. The quote is the invoice.</p>
+      </div>
+
+      <div class="schedule-form-wrapper fade-in">
+        <form class="contact-form schedule-form" id="quoteForm" action="https://formspree.io/f/xeevgbjp" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New Quote Request - The Fuel Guys">
+          <input type="hidden" name="form_type" value="Quote Request">
+          <input type="hidden" name="_next" value="https://thefuelguysdiesel.com/thank-you/quote/">
+
+          <h3 class="form-section-title"><i class="fas fa-user"></i> Contact Info</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="ABC Construction (optional)">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+            </div>
+          </div>
+
+          <h3 class="form-section-title"><i class="fas fa-gas-pump"></i> Quote Details</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fuel_type">Fuel Type <span class="required">*</span></label>
+              <select id="fuel_type" name="fuel_type" required>
+                <option value="" disabled selected>Select fuel type</option>
+                <option value="diesel-clear">Clear Diesel (ULSD)</option>
+                <option value="diesel-dyed">Dyed / Red Diesel (Off-road)</option>
+                <option value="def">DEF (Diesel Exhaust Fluid)</option>
+                <option value="bulk">Bulk Fuel</option>
+                <option value="multiple">Multiple types</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Estimated Quantity (gallons) <span class="required">*</span></label>
+              <input type="text" id="quantity" name="quantity" placeholder="e.g. 250" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="frequency">Delivery Frequency</label>
+              <select id="frequency" name="frequency">
+                <option value="" disabled selected>Select frequency</option>
+                <option value="one-time">One-time delivery</option>
+                <option value="weekly">Weekly</option>
+                <option value="biweekly">Bi-weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="as-needed">As needed / on-call</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="delivery_zip">Delivery Zip Code <span class="required">*</span></label>
+              <input type="text" id="delivery_zip" name="delivery_zip" placeholder="80202" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Notes</label>
+            <textarea id="message" name="message" rows="3" placeholder="Anything else we should know? (optional)"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>Get My Quote</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-fineprint">
+            <i class="fas fa-shield-alt"></i>
+            Free, no-obligation quote. The price you see is the price you pay.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <img src="/logo.svg" alt="The Fuel Guys LLC" class="footer-logo-img">
+          </a>
+          <p>Denver's bilingual mobile diesel delivery. Built by contractors. Never dry.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/areas/">Service Areas</a></li>
+            <li><a href="/schedule/">Schedule</a></li>
+            <li><a href="/quote/">Get a Quote</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/">Diesel Delivery</a></li>
+            <li><a href="/services/">DEF Supply</a></li>
+            <li><a href="/services/">Bulk Fuel Supply</a></li>
+            <li><a href="/services/">Emergency Service</a></li>
+            <li><a href="/signup/">Fleet Programs</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:7207361614" onclick="return gtag_report_conversion('tel:7207361614');">(720) 736-1614</a></p>
+          <p><i class="fas fa-envelope"></i> edykema@fuel-guys.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Denver Metro &amp; Front Range</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Fuel Guys LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
