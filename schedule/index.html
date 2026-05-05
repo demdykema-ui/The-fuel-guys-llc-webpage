@@ -138,10 +138,45 @@
       </div>
 
       <div class="schedule-form-wrapper fade-in">
+
+        <!-- MEMBER FAST-TRACK -->
+        <div style="background: var(--primary); border-radius: 14px; padding: 28px 30px; margin-bottom: 30px; color: var(--white); border-left: 5px solid var(--accent);">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+            <i class="fas fa-crown" style="color: var(--accent); font-size: 1.3rem;"></i>
+            <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 700; margin: 0;">Rewards Member? Fast-Track Your Order</h3>
+          </div>
+          <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.6;">
+            Enter your Member I.D. below to place a confirmed delivery order. As a Rewards member, your scheduling is prioritized with a 2-hour dispatch window.
+          </p>
+          <div class="form-group" style="max-width: 360px;">
+            <label for="member_id" style="color: rgba(255,255,255,0.9); font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; display: block;">Member I.D. Number</label>
+            <input type="text" id="member_id" name="member_id" placeholder="e.g. FG-10042" style="background: rgba(255,255,255,0.1); border: 2px solid rgba(212,160,23,0.4); color: var(--white); padding: 12px 16px; border-radius: 8px; font-size: 0.95rem; width: 100%; font-family: 'Open Sans', sans-serif;">
+          </div>
+          <div style="background: rgba(212,160,23,0.1); border: 1px solid rgba(212,160,23,0.25); border-radius: 8px; padding: 14px 18px; margin-top: 16px;">
+            <p style="font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0;">
+              <i class="fas fa-info-circle" style="color: var(--accent); margin-right: 6px;"></i>
+              <strong style="color: var(--accent);">Important:</strong> Diesel prices are volatile and subject to daily market changes. We will always send you a <strong style="color: var(--white);">confirmation text</strong> to verify your order. Once you confirm, the price for that day will be locked in and sent to you along with all delivery confirmation details.
+            </p>
+          </div>
+          <p style="font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 10px;">
+            Not a member yet? <a href="/signup/" style="color: var(--accent); font-weight: 600; text-decoration: underline;">Join the Founding 100 &rarr;</a>
+          </p>
+        </div>
+
+        <p style="text-align: center; font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px;">
+          <strong>No Member I.D.?</strong> No problem &mdash; fill out the form below for a standard delivery request. We'll get back to you to discuss pricing and availability.
+        </p>
+
         <form class="contact-form schedule-form" id="scheduleForm" action="https://formspree.io/f/xeevgbjp" method="POST" novalidate>
           <input type="hidden" name="_subject" value="New Delivery Request - The Fuel Guys">
           <input type="hidden" name="form_type" value="Delivery Request (Pending Approval)">
           <input type="hidden" name="_next" value="https://thefuelguysdiesel.com/thank-you/scheduled/">
+
+          <h3 class="form-section-title"><i class="fas fa-id-badge"></i> Member I.D. (if applicable)</h3>
+          <div class="form-group">
+            <label for="member_id_form">Rewards Member I.D.</label>
+            <input type="text" id="member_id_form" name="member_id" placeholder="e.g. FG-10042 (leave blank if not a member)">
+          </div>
 
           <h3 class="form-section-title"><i class="fas fa-user"></i> Your Information</h3>
           <div class="form-row">
