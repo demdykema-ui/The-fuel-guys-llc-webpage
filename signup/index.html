@@ -27,16 +27,402 @@
   }
   </script>
 
-  <title>Sign Up for Rewards | The Fuel Guys LLC | Earn Points & Discounts</title>
-  <meta name="description" content="Join The Fuel Guys Rewards program. Earn points on every delivery and unlock discounts. Sign up free - rewards launching soon. Get points from day one.">
-  <meta name="keywords" content="fuel rewards Denver, diesel discount program, fuel loyalty program, fuel delivery rewards">
+  <title>Rewards Program | The Fuel Guys LLC | $250/Month in Value — FREE</title>
+  <meta name="description" content="Join The Fuel Guys Rewards. $250/month in value — free for the Founding 100. Free delivery fees, DEF top-offs, priority dispatch, locked-in pricing, vetted contractor network, and points on every gallon.">
+  <meta name="keywords" content="fuel rewards Denver, diesel loyalty program, fuel delivery rewards, fleet fuel discounts Colorado">
 
   <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="apple-touch-icon" href="/logo.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Fuel Guys Rewards | $250/Month Value — FREE for Founding 100">
+  <meta property="og:description" content="Free delivery fees, DEF top-offs, priority dispatch, vetted contractor network, and points on every gallon. 84 spots left.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    .membership-hero {
+      background: linear-gradient(135deg, #050505 0%, #0a0a0a 40%, #0d1520 100%);
+      color: #fff;
+      text-align: center;
+      padding: 160px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .membership-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(212, 160, 23, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(26, 58, 107, 0.15) 0%, transparent 50%);
+    }
+
+    .membership-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .membership-hero .inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .spots-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(192, 57, 43, 0.2);
+      border: 1px solid rgba(192, 57, 43, 0.5);
+      color: #ff6b6b;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: 30px;
+      margin-bottom: 28px;
+      animation: subtlePulse 3s ease-in-out infinite;
+    }
+
+    .membership-hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .membership-hero h1 span { color: var(--accent); }
+
+    .membership-hero .value-line {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .value-big {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .value-sub {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .value-sub strong {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .membership-hero .tagline {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .hero-cta-row .btn-lg {
+      padding: 18px 40px;
+      font-size: 1.1rem;
+    }
+
+    .hero-spots-count {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-spots-count strong {
+      color: #ff6b6b;
+    }
+
+    /* ===== TIERS ===== */
+    .tier-section {
+      padding: 80px 0;
+    }
+
+    .tier-section:nth-child(even) {
+      background: var(--light-gray);
+    }
+
+    .tier-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .tier-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .tier-icon.gold { background: rgba(212, 160, 23, 0.15); color: var(--accent); }
+    .tier-icon.blue { background: rgba(26, 58, 107, 0.15); color: var(--blue); }
+    .tier-icon.dark { background: rgba(10, 10, 10, 0.1); color: var(--primary); }
+
+    .tier-header h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .tier-header h2 span {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    /* Perk rows */
+    .perk-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .perk-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .perk-list li:last-child {
+      border-bottom: none;
+    }
+
+    .perk-list li .perk-check {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(212, 160, 23, 0.12);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .perk-list li strong { color: var(--primary); }
+
+    .perk-value {
+      display: inline-block;
+      background: rgba(212, 160, 23, 0.1);
+      color: var(--accent-hover);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+
+    /* Points table */
+    .points-table {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .points-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      border: 1px solid rgba(10, 10, 10, 0.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .points-card .pts {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .points-card .pts-label {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .points-card .pts-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Founding access */
+    .network-highlight {
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 36px 40px;
+      margin: 24px 0;
+      border-left: 5px solid var(--accent);
+    }
+
+    .network-highlight h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .network-highlight p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .network-highlight p:last-child { margin-bottom: 0; }
+
+    .network-highlight .disclaimer {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+      font-style: italic;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 14px;
+      margin-top: 18px;
+    }
+
+    /* Launch bonus bar */
+    .launch-bonus {
+      background: var(--primary);
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--white);
+      border-top: 3px solid var(--accent);
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .launch-bonus-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .launch-bonus-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .launch-bonus-text {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.5;
+    }
+
+    .launch-bonus-text strong {
+      color: var(--accent);
+    }
+
+    /* Bottom CTA */
+    .final-signup {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #050505 0%, #0d1520 100%);
+      color: var(--white);
+    }
+
+    .final-signup h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .final-signup h2 span { color: var(--accent); }
+
+    .final-signup p {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 500px;
+      margin: 0 auto 32px;
+    }
+
+    @media (max-width: 768px) {
+      .membership-hero { padding: 120px 16px 60px; }
+      .membership-hero h1 { font-size: 2rem; }
+      .value-big { font-size: 3.2rem; }
+      .tier-header h2 { font-size: 1.5rem; }
+      .points-table { grid-template-columns: 1fr; max-width: 280px; margin: 24px auto; }
+      .network-highlight { padding: 28px 24px; }
+      .launch-bonus-inner { flex-direction: column; text-align: center; }
+      .final-signup h2 { font-size: 1.8rem; }
+    }
+
+    @media (max-width: 480px) {
+      .membership-hero h1 { font-size: 1.6rem; }
+      .value-big { font-size: 2.6rem; }
+      .tier-header { flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
@@ -63,86 +449,163 @@
     </div>
   </nav>
 
-  <section class="page-hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <span class="hero-badge" style="margin-bottom: 18px;">
-        <i class="fas fa-crown"></i> Limited &mdash; First 100 Members Only
-      </span>
-      <h1 class="page-hero-title">Join The Fuel Guys <span>Rewards</span></h1>
-      <p class="page-hero-subtitle"><strong style="color: var(--accent); font-size: 2.2rem; display: block; margin-bottom: 10px;">$250/month in value &mdash; FREE</strong>Earn points on every gallon. Unlock exclusive discounts, priority scheduling, and early access to everything we build. <strong>Your points start counting from day one.</strong></p>
+  <!-- ===== HERO ===== -->
+  <section class="membership-hero">
+    <div class="inner">
+      <div class="spots-badge">
+        <i class="fas fa-fire"></i> Founding 100 &mdash; 84 Spots Remaining
+      </div>
+      <h1>The Fuel Guys <span>Rewards Program</span></h1>
+      <p class="tagline">A premium membership built for Denver's serious fuel buyers.</p>
+      <div class="value-line">
+        <span class="value-big">$250</span>
+        <span class="value-sub">/month in value &mdash; <strong>FREE for life</strong> for the Founding 100</span>
+      </div>
+      <div class="hero-cta-row">
+        <a href="#signupForm" class="btn btn-primary btn-lg"><i class="fas fa-crown"></i> Claim Your Founding Spot</a>
+      </div>
+      <p class="hero-spots-count"><strong>84</strong> of 100 founding spots remaining. Once they're gone, membership goes to $250/mo.</p>
     </div>
   </section>
 
   <!-- ===== LAUNCH BONUS ===== -->
-  <section style="background: var(--primary); padding: 40px 0; text-align: center; color: var(--white);">
-    <div class="container">
-      <div class="rewards-promo-deal fade-in" style="max-width: 640px; margin: 0 auto;">
-        <div class="deal-icon"><i class="fas fa-fire"></i></div>
-        <div class="deal-text" style="font-size: 1.1rem;">
-          <strong>Launch Bonus:</strong> Order 500 gallons within your first week of signing up and your <strong>next 2 deliveries are completely FREE.</strong>
-        </div>
+  <div class="launch-bonus">
+    <div class="launch-bonus-inner fade-in">
+      <div class="launch-bonus-icon"><i class="fas fa-bolt"></i></div>
+      <div class="launch-bonus-text">
+        <strong>Founding-Member Bonus:</strong> Order 500+ gallons in your first 7 days and your <strong>next 2 delivery fees are on us.</strong>
       </div>
+    </div>
+  </div>
+
+  <!-- ===== TIER 1: STANDARD PERKS ===== -->
+  <section class="tier-section">
+    <div class="container">
+      <div class="tier-header fade-in">
+        <div class="tier-icon gold"><i class="fas fa-star"></i></div>
+        <h2>Standard Member Perks <span>$250/month value &mdash; included free</span></h2>
+      </div>
+
+      <ul class="perk-list fade-in">
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>Free delivery fee every 2,500 gallons purchased</strong> &mdash; that's a $125 credit cycling back to you on a regular basis. <span class="perk-value">$125 value</span></div>
+        </li>
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>Free DEF top-off with every diesel delivery</strong> &mdash; we bring DEF at no extra charge whenever we fill your diesel. No separate trip, no separate invoice. <span class="perk-value">$40/mo value</span></div>
+        </li>
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>2-hour priority dispatch guarantee</strong> &mdash; while standard customers get a 4-hour window, Rewards members get a locked 2-hour arrival window on scheduled deliveries. <span class="perk-value">$50/mo value</span></div>
+        </li>
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>Locked-in delivery pricing</strong> &mdash; your per-gallon rate stays fixed for the term. No fuel surcharges, no seasonal markups, no surprises on the invoice. <span class="perk-value">$30/mo value</span></div>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- ===== HOW REWARDS WORK ===== -->
-  <section class="section how-it-works" style="background: var(--light-gray);">
+  <!-- ===== TIER 2: POINTS SYSTEM ===== -->
+  <section class="tier-section">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="eyebrow">The Rewards Program</span>
-        <h2 class="section-title">Loyalty pays.</h2>
-        <div class="section-underline"></div>
-        <p class="section-subtitle">A points-based rewards system designed for our loyal customers. Sign up early to lock in your spot &mdash; your points and tier accumulate from your first delivery.</p>
+      <div class="tier-header fade-in">
+        <div class="tier-icon blue"><i class="fas fa-coins"></i></div>
+        <h2>Earn-as-You-Go Rewards <span>Points on every gallon &mdash; redeem when you want</span></h2>
       </div>
 
-      <div class="schedule-steps">
-        <div class="schedule-step fade-in">
-          <div class="step-num"><i class="fas fa-user-plus"></i></div>
-          <h3>Sign Up Free</h3>
-          <p>Quick registration. No fees, no commitments, no contracts.</p>
+      <ul class="perk-list fade-in">
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>Every 2,000 gallons purchased &rarr; next delivery fee waived.</strong> It's automatic. Hit the milestone, the fee disappears on your next order.</div>
+        </li>
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>1 reward point per gallon purchased.</strong> Points accumulate in your account and you choose when to redeem. Fleet managers love this &mdash; stockpile before a big quarter or burn them on a slow month.</div>
+        </li>
+      </ul>
+
+      <div class="points-table fade-in">
+        <div class="points-card">
+          <span class="pts">900</span>
+          <span class="pts-label">points</span>
+          <span class="pts-value">$25 credit</span>
         </div>
-        <div class="schedule-step fade-in">
-          <div class="step-num"><i class="fas fa-gas-pump"></i></div>
-          <h3>Earn Points</h3>
-          <p>Earn points on every gallon delivered. Every dollar counts toward rewards.</p>
+        <div class="points-card">
+          <span class="pts">2,200</span>
+          <span class="pts-label">points</span>
+          <span class="pts-value">$60 credit</span>
         </div>
-        <div class="schedule-step fade-in">
-          <div class="step-num"><i class="fas fa-tags"></i></div>
-          <h3>Unlock Discounts</h3>
-          <p>Redeem points for discounts on future deliveries, priority dispatch, and exclusive perks.</p>
-        </div>
-        <div class="schedule-step fade-in">
-          <div class="step-num"><i class="fas fa-trophy"></i></div>
-          <h3>Tier Up</h3>
-          <p>The more you fuel, the higher your tier. Higher tiers = bigger discounts.</p>
+        <div class="points-card">
+          <span class="pts">4,800</span>
+          <span class="pts-label">points</span>
+          <span class="pts-value">$175 credit</span>
         </div>
       </div>
 
-      <div class="schedule-disclaimer fade-in">
-        <i class="fas fa-rocket"></i>
-        <div>
-          <strong>The rewards program is launching soon.</strong>
-          We're building it now. Sign up today and we'll start tracking your points immediately so you have a head start when it goes live. Early signups get bonus points and grandfathered tier perks.
-        </div>
+      <p style="text-align: center; color: var(--text-light); font-size: 0.95rem; margin-top: 12px;">
+        Redeem points for fuel credits or delivery fee waivers &mdash; your choice, your timing.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== TIER 3: FOUNDING ACCESS ===== -->
+  <section class="tier-section">
+    <div class="container">
+      <div class="tier-header fade-in">
+        <div class="tier-icon dark"><i class="fas fa-crown"></i></div>
+        <h2>Exclusive Founding-Member Access <span>Things money can't buy after the first 100</span></h2>
+      </div>
+
+      <ul class="perk-list fade-in">
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>Direct introductions to The Fuel Guys' Vetted Contractor Network</strong> &mdash; pre-screened specialists in construction, trades, equipment rental, and more. Details below.</div>
+        </li>
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>Free lifetime access to any software The Fuel Guys releases</strong> &mdash; fuel tracking, delivery management, fleet tools. Whatever we build, Founding Members get it first and free.</div>
+        </li>
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>Early access to every innovation The Fuel Guys create</strong> &mdash; new services, new products, new technology. Founding Members are always first in line.</div>
+        </li>
+        <li>
+          <div class="perk-check"><i class="fas fa-check"></i></div>
+          <div><strong>Direct line to Erick</strong> &mdash; the owner, not a call center. Your feedback shapes what we build next.</div>
+        </li>
+      </ul>
+
+      <div class="network-highlight fade-in">
+        <h3><i class="fas fa-hard-hat" style="margin-right: 8px;"></i> The Elite Contractor Network</h3>
+        <p>
+          Every fuel company sells fuel. <strong>Nobody sells access to a curated business network.</strong> As a Founding Member, you get direct introductions to our vetted pipeline of trusted contractors &mdash; framers, drywall crews, siding specialists, equipment operators, and more.
+        </p>
+        <p>
+          Every contractor in our network is verified: <strong>licensed, insured, with 3+ positive references from existing Fuel Guys customers, and personally interviewed by our team.</strong> We are the trust layer.
+        </p>
+        <p class="disclaimer">
+          The Fuel Guys vets contractors for licensing, insurance, and reputation, but we are not responsible for the work performed by network members. All contracts are between you and the contractor directly.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- ===== SIGNUP FORM ===== -->
-  <section class="section schedule-form-section">
+  <section class="section schedule-form-section" id="signupForm">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="eyebrow">Free to Join</span>
-        <h2 class="section-title">Sign Up for Rewards</h2>
+        <span class="eyebrow">Claim Your Spot</span>
+        <h2 class="section-title">Join the Founding 100</h2>
         <div class="section-underline"></div>
-        <p class="section-subtitle">Takes under 60 seconds. We'll set up your rewards account and start tracking points from your next delivery.</p>
+        <p class="section-subtitle">Takes under 60 seconds. <strong style="color: var(--accent-hover);">84 spots remaining.</strong></p>
       </div>
 
       <div class="schedule-form-wrapper fade-in">
-        <form class="contact-form schedule-form" id="signupForm" action="https://formspree.io/f/xeevgbjp" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="New Rewards Signup - The Fuel Guys">
-          <input type="hidden" name="form_type" value="Rewards Program Signup">
+        <form class="contact-form schedule-form" id="rewardsForm" action="https://formspree.io/f/xeevgbjp" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="NEW FOUNDING MEMBER SIGNUP - The Fuel Guys Rewards">
+          <input type="hidden" name="form_type" value="Rewards Program - Founding Member Signup">
           <input type="hidden" name="_next" value="https://thefuelguysdiesel.com/thank-you/signup/">
 
           <h3 class="form-section-title"><i class="fas fa-user"></i> Your Info</h3>
@@ -168,7 +631,7 @@
             </div>
           </div>
 
-          <h3 class="form-section-title"><i class="fas fa-info-circle"></i> Customer Type</h3>
+          <h3 class="form-section-title"><i class="fas fa-info-circle"></i> About You</h3>
           <div class="form-row">
             <div class="form-group">
               <label for="customer_type">Are you...? <span class="required">*</span></label>
@@ -194,63 +657,38 @@
             </div>
           </div>
 
-          <h3 class="form-section-title"><i class="fas fa-comments"></i> Communication Preferences</h3>
           <div class="form-group" style="background: var(--light-gray); padding: 16px 18px; border-radius: 8px;">
             <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-weight: 500;">
-              <input type="checkbox" name="opt_in_email" value="yes" checked style="margin-top: 4px; width: 18px; height: 18px; accent-color: var(--accent);">
-              <span style="font-size: 0.95rem;">Send me updates about the rewards program launch, point balance, and exclusive offers</span>
+              <input type="checkbox" name="opt_in" value="yes" checked style="margin-top: 4px; width: 18px; height: 18px; accent-color: var(--accent);">
+              <span style="font-size: 0.95rem;">Send me program updates, point balance, promo codes, and contractor network introductions</span>
             </label>
-          </div>
-          <div class="form-group" style="background: var(--light-gray); padding: 16px 18px; border-radius: 8px;">
-            <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-weight: 500;">
-              <input type="checkbox" name="opt_in_sms" value="yes" style="margin-top: 4px; width: 18px; height: 18px; accent-color: var(--accent);">
-              <span style="font-size: 0.95rem;">Text me delivery updates and time-sensitive promo codes (optional)</span>
-            </label>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Anything Else?</label>
-            <textarea id="message" name="message" rows="2" placeholder="Questions about the program, suggestions, or anything else (optional)"></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary btn-block">
-            <span>Sign Up &mdash; Start Earning Points</span>
-            <i class="fas fa-star"></i>
+            <span>Claim My Founding Spot</span>
+            <i class="fas fa-crown"></i>
           </button>
           <p class="form-fineprint">
             <i class="fas fa-shield-alt"></i>
-            Free to join. No credit card. Cancel anytime. We never sell your information.
+            Free for Founding 100. No credit card. No contracts. Cancel anytime. We never sell your info.
           </p>
+
+          <div class="form-success" id="formSuccess" role="alert" aria-live="assertive">
+            <i class="fas fa-check-circle"></i>
+            <p><strong>Welcome to the Founding 100!</strong> Redirecting you now...</p>
+          </div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- ===== EARLY SIGNUP PERKS ===== -->
-  <section class="section" style="background: var(--primary); color: var(--white);">
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-signup">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="eyebrow" style="color: var(--accent);">Early Bird Bonus</span>
-        <h2 class="section-title" style="color: var(--white);">Sign up early. Get more.</h2>
-        <div class="section-underline"></div>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card fade-in" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-          <div class="feature-icon" style="background: rgba(212,160,23,0.15);"><i class="fas fa-bolt"></i></div>
-          <h3 style="color: var(--white);">Bonus Points</h3>
-          <p style="color: rgba(255,255,255,0.7);">Early signups get 500 bonus points credited at launch &mdash; on us.</p>
-        </div>
-        <div class="feature-card fade-in" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-          <div class="feature-icon" style="background: rgba(212,160,23,0.15);"><i class="fas fa-medal"></i></div>
-          <h3 style="color: var(--white);">Founding Member Status</h3>
-          <p style="color: rgba(255,255,255,0.7);">Early members get exclusive Founding Member badge and lifetime perks.</p>
-        </div>
-        <div class="feature-card fade-in" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-          <div class="feature-icon" style="background: rgba(212,160,23,0.15);"><i class="fas fa-clock"></i></div>
-          <h3 style="color: var(--white);">Points From Day One</h3>
-          <p style="color: rgba(255,255,255,0.7);">Every gallon you order between now and launch counts toward rewards.</p>
-        </div>
+      <h2>Don't miss your spot.<br><span>84 of 100 remaining.</span></h2>
+      <p>Once the Founding 100 is full, membership goes to $250/month. Lock in free-for-life now.</p>
+      <div class="hero-cta-row">
+        <a href="#signupForm" class="btn btn-primary btn-lg"><i class="fas fa-crown"></i> Claim Your Founding Spot</a>
       </div>
     </div>
   </section>
@@ -278,8 +716,8 @@
             <li><a href="/about/">About Us</a></li>
             <li><a href="/areas/">Service Areas</a></li>
             <li><a href="/schedule/">Schedule</a></li>
+            <li><a href="/signup/">Rewards</a></li>
             <li><a href="/quote/">Get a Quote</a></li>
-            <li><a href="/signup/">Rewards Signup</a></li>
             <li><a href="/contact/">Contact</a></li>
           </ul>
         </div>
