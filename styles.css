@@ -1214,9 +1214,10 @@ img {
 }
 
 .featured-quote {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--display);
   font-size: 1.18rem;
   font-weight: 400;
+  font-style: italic;
   line-height: 1.6;
   margin-bottom: 34px;
   letter-spacing: -0.005em;
@@ -2197,6 +2198,80 @@ img {
 }
 
 /* ============================================
+   BRAND MOTIFS
+   ============================================ */
+
+/* Premium gold frame */
+.premium-frame {
+  position: relative;
+  border: 1px solid var(--accent);
+  padding: 2.5rem 2rem;
+}
+
+.premium-frame::before,
+.premium-frame::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--accent);
+}
+
+.premium-frame::before {
+  top: -7px;
+  left: -7px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.premium-frame::after {
+  bottom: -7px;
+  right: -7px;
+  border-left: 0;
+  border-top: 0;
+}
+
+/* Dot-line-dot ornament divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px auto 24px;
+  width: fit-content;
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.ornament .ornament-line {
+  width: 110px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* FG Diamond monogram */
+.fg-monogram {
+  display: block;
+  margin: 0 auto 1rem;
+  height: 56px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .fg-monogram {
+    height: 40px;
+  }
+}
+
+/* ============================================
    12. RESPONSIVE BREAKPOINTS
    ============================================ */
 
@@ -2609,10 +2684,11 @@ img {
 }
 
 .page-hero-title {
-  font-size: 3rem;
-  font-weight: 800;
+  font-family: var(--display);
+  font-size: 2.7rem;
+  font-weight: 700;
   margin-bottom: 16px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
 }
 
@@ -2765,9 +2841,9 @@ img {
 }
 
 .fact-number {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-family: var(--display);
+  font-size: 2.1rem;
+  font-weight: 700;
   color: var(--accent);
   opacity: 0.2;
   position: absolute;
@@ -2914,12 +2990,12 @@ img {
 }
 
 .value-amount {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4rem;
+  font-family: var(--display);
+  font-size: 3.5rem;
   font-weight: 900;
   color: var(--accent);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .value-period {
