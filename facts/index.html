@@ -262,6 +262,97 @@
         font-size: 1.1rem;
       }
     }
+
+    /* ===== FACTS TOGGLE ===== */
+    .facts-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin: 0 auto 40px;
+      max-width: 500px;
+      background: #e8e5de;
+      border-radius: 50px;
+      padding: 4px;
+    }
+
+    .facts-toggle-btn {
+      flex: 1;
+      padding: 14px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: transparent;
+      color: #555555;
+    }
+
+    .facts-toggle-btn.active {
+      background: #0a0a0a;
+      color: #d4a017;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .facts-toggle-btn:hover:not(.active) {
+      color: #0a0a0a;
+    }
+
+    .facts-panel {
+      display: none;
+    }
+
+    .facts-panel.active {
+      display: block;
+    }
+
+    .dyed-fact-card {
+      background: #f5f5f0;
+      border-radius: 14px;
+      padding: 40px 32px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(10, 10, 10, 0.05);
+      border-left: 4px solid #c0392b;
+    }
+
+    .dyed-fact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    }
+
+    .dyed-fact-card .fact-category {
+      color: #c0392b;
+      background: rgba(192, 57, 43, 0.08);
+    }
+
+    .dyed-fact-card .fact-number {
+      color: #c0392b;
+    }
+
+    .dyed-cta {
+      text-align: center;
+      padding: 40px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      .facts-toggle {
+        max-width: 100%;
+        margin: 0 20px 30px;
+      }
+
+      .facts-toggle-btn {
+        font-size: 0.75rem;
+        padding: 12px 16px;
+      }
+
+      .dyed-fact-card {
+        padding: 28px 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -296,14 +387,20 @@
     </div>
   </section>
 
-  <!-- ===== INTRO ===== -->
+  <!-- ===== TOGGLE + INTRO ===== -->
   <section class="facts-intro">
     <div class="container">
-      <p class="fade-in">The fuel industry powers the world &mdash; but behind every gallon is a story of science, money, power, and consequence. Here are 18 facts that reveal what most people never learn about the diesel fuel that keeps civilization moving.</p>
+      <div class="facts-toggle">
+        <button class="facts-toggle-btn active" data-panel="dark-facts"><i class="fas fa-skull-crossbones" style="margin-right: 6px;"></i> Dark Industry Facts</button>
+        <button class="facts-toggle-btn" data-panel="dyed-facts" style="color: #c0392b;"><i class="fas fa-tint" style="margin-right: 6px;"></i> Red Dye Diesel Facts</button>
+      </div>
+      <p class="fade-in" id="intro-dark">The fuel industry powers the world &mdash; but behind every gallon is a story of science, money, power, and consequence. Here are 18 facts that reveal what most people never learn about the diesel fuel that keeps civilization moving.</p>
+      <p class="fade-in" id="intro-dyed" style="display: none;">Red dye diesel saves Colorado businesses thousands every year &mdash; but most people don't know the rules, the risks, or the real numbers. Here are the facts about off-road diesel that could change how you buy fuel.</p>
     </div>
   </section>
 
-  <!-- ===== FACTS GRID ===== -->
+  <!-- ===== DARK INDUSTRY FACTS ===== -->
+  <div class="facts-panel active" id="dark-facts">
   <section class="facts-section">
     <div class="facts-grid">
 
@@ -440,6 +537,106 @@
 
     </div>
   </section>
+  </div><!-- end dark-facts panel -->
+
+  <!-- ===== RED DYE DIESEL FACTS ===== -->
+  <div class="facts-panel" id="dyed-facts">
+  <section class="facts-section">
+    <div class="facts-grid">
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Tax &amp; Savings</span>
+        <div class="fact-number">01</div>
+        <h3>You're Paying 51 Cents Extra Per Gallon If You Use Clear Diesel Off-Road</h3>
+        <p>Federal tax (24.4&cent;) + Colorado state tax (26.8&cent;) = 51.2&cent; per gallon you don't have to pay if your equipment never touches a public road. At 2,000 gallons/month, that's $12,288/year in savings.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">The Law</span>
+        <div class="fact-number">02</div>
+        <h3>The IRS Can Fine You $10 Per Gallon for Using Red Diesel on the Road</h3>
+        <p>Get caught with dyed fuel in a highway vehicle and the minimum penalty is $10/gallon or $1,000 per violation &mdash; whichever is greater. Repeat offenders face criminal charges. The IRS uses dip tests at weigh stations.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Chemistry</span>
+        <div class="fact-number">03</div>
+        <h3>Red Dye Diesel Is Chemically Identical to Clear Diesel</h3>
+        <p>Same #2 ULSD. Same BTUs. Same cetane rating. Same performance. The only difference is Solvent Red 164 dye added at the terminal &mdash; the IRS requires it to mark the fuel as tax-exempt. Your engine doesn't know the difference.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">The Law</span>
+        <div class="fact-number">04</div>
+        <h3>You Can't Wash the Dye Out &mdash; The IRS Checks for Molecular Markers</h3>
+        <p>Some people think you can filter or bleach the red dye out. Even if you remove the visible color, the IRS tests for chemical markers that survive any cleaning process. Getting caught means felony charges.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Who Qualifies</span>
+        <div class="fact-number">05</div>
+        <h3>Construction Equipment, Generators, and Farm Equipment All Qualify</h3>
+        <p>Excavators, loaders, dozers, skid steers, cranes, backup generators, event generators, tractors, combines, irrigation pumps, mining equipment, stationary engines &mdash; if it never drives on a public road, it qualifies for dyed diesel.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Tax &amp; Savings</span>
+        <div class="fact-number">06</div>
+        <h3>A Mid-Size Contractor Saves $12,000+ Per Year by Switching</h3>
+        <p>At 2,000 gallons/month (common for a 3-5 equipment operation), switching from clear to dyed diesel saves ~$1,024/month. Over 5 years, that's $61,440 &mdash; enough to buy a new piece of equipment.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Common Myths</span>
+        <div class="fact-number">07</div>
+        <h3>"I Can Use Red Diesel in My Work Truck If It Only Goes to Job Sites"</h3>
+        <p>FALSE. If the vehicle is registered for highway use and drives on any public road &mdash; even a quarter mile between sites &mdash; it must run clear diesel. Period. The "mostly off-road" excuse does not exist in IRS regulations.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Industry</span>
+        <div class="fact-number">08</div>
+        <h3>The US Uses Over 4 Billion Gallons of Dyed Diesel Per Year</h3>
+        <p>Agriculture alone accounts for roughly 3.3 billion gallons annually. Construction, mining, and power generation consume the rest. It's a massive market that most people outside the industry never see.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Colorado Specific</span>
+        <div class="fact-number">09</div>
+        <h3>Colorado's State Diesel Tax Has Increased 3 Times in the Last Decade</h3>
+        <p>The state portion of diesel tax keeps climbing. Every increase makes the savings from switching to dyed diesel even larger for off-road users. Today's 26.8&cent;/gallon state tax wasn't always that high &mdash; and it's likely going higher.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Compliance</span>
+        <div class="fact-number">10</div>
+        <h3>The IRS Recommends Keeping Dyed Diesel Records for at Least 3 Years</h3>
+        <p>If audited, the burden of proof is on you. Keep every invoice showing dyed diesel purchases, log which equipment received it, and document that your equipment is off-road only. The Fuel Guys' invoicing makes this easy.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">Environment</span>
+        <div class="fact-number">11</div>
+        <h3>Dyed Diesel Must Meet the Same ULSD Standards as Clear Diesel</h3>
+        <p>Since 2014, all dyed diesel sold in the US must be ultra-low sulfur (15 ppm max). The environmental standards are identical. There is no "dirty diesel" loophole for off-road use anymore.</p>
+      </div>
+
+      <div class="dyed-fact-card fade-in">
+        <span class="fact-category">The Fuel Guys Difference</span>
+        <div class="fact-number">12</div>
+        <h3>We Deliver Both Clear and Dyed From the Same Truck, Same Trip</h3>
+        <p>No separate orders, no separate invoicing hassle. Tell us which equipment gets clear and which gets dyed &mdash; we sort it on-site. Inner Circle members get full lab reports for every batch we deliver.</p>
+      </div>
+
+    </div>
+
+    <div class="dyed-cta fade-in">
+      <p style="font-size: 1.1rem; color: #555; margin-bottom: 20px;">Want to start saving 51&cent; per gallon on your off-road equipment?</p>
+      <a href="/red-dye-diesel/" class="btn btn-primary" style="background: #c0392b; border-color: #c0392b; margin: 6px;"><i class="fas fa-tint"></i> Learn About Red Dye Diesel</a>
+      <a href="/quote/" class="btn btn-outline" style="border-color: #0a0a0a; color: #0a0a0a; margin: 6px;">Get a Quote</a>
+    </div>
+  </section>
+  </div><!-- end dyed-facts panel -->
 
   <!-- ===== CTA BANNER ===== -->
   <section class="cta-banner">
@@ -508,5 +705,32 @@
   </footer>
 
   <script src="/script.js"></script>
+  <script>
+    // Facts toggle
+    document.querySelectorAll('.facts-toggle-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var panel = this.getAttribute('data-panel');
+        // Toggle buttons
+        document.querySelectorAll('.facts-toggle-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        // Toggle panels
+        document.querySelectorAll('.facts-panel').forEach(function(p) { p.classList.remove('active'); });
+        document.getElementById(panel).classList.add('active');
+        // Toggle intros
+        if (panel === 'dark-facts') {
+          document.getElementById('intro-dark').style.display = 'block';
+          document.getElementById('intro-dyed').style.display = 'none';
+        } else {
+          document.getElementById('intro-dark').style.display = 'none';
+          document.getElementById('intro-dyed').style.display = 'block';
+        }
+        // Re-trigger fade-in animations on new panel
+        document.getElementById(panel).querySelectorAll('.fade-in').forEach(function(el) {
+          el.classList.remove('visible');
+          setTimeout(function() { el.classList.add('visible'); }, 50);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
