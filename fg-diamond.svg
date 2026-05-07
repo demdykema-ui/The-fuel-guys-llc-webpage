@@ -1,0 +1,6 @@
+<svg viewBox="0 0 64 88" xmlns="http://www.w3.org/2000/svg" aria-label="The Fuel Guys monogram">
+  <path d="M32 2 L60 44 L32 86 L4 44 Z" fill="#1a1a2e" stroke="#d4a017" stroke-width="1.4"/>
+  <text x="32" y="51" text-anchor="middle"
+        font-family="'Playfair Display', serif" font-weight="700" font-size="20"
+        fill="#d4a017" letter-spacing="0.02em">FG</text>
+</svg>
