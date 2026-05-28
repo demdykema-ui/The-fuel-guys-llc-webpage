@@ -185,41 +185,17 @@
             <input type="hidden" name="_subject" value="New Contact Form Message - The Fuel Guys">
             <input type="hidden" name="form_type" value="Information Request">
             <input type="hidden" name="_next" value="https://thefuelguysdiesel.com/thank-you/information/">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" placeholder="John Smith" required>
-                <span class="error-message" id="nameError" aria-live="polite"></span>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                <span class="error-message" id="emailError" aria-live="polite"></span>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Phone Number <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                <span class="error-message" id="phoneError" aria-live="polite"></span>
-              </div>
-              <div class="form-group">
-                <label for="service">Service Type</label>
-                <select id="service" name="service">
-                  <option value="" disabled selected>Select a service</option>
-                  <option value="diesel">Diesel Delivery</option>
-                  <option value="def">DEF Supply</option>
-                  <option value="bulk">Bulk Fuel</option>
-                  <option value="emergency">Emergency</option>
-                  <option value="fleet">Fleet</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+            <div class="form-group">
+              <label for="name">Your Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="First and last name" required>
             </div>
             <div class="form-group">
-              <label for="message">Message <span class="required">*</span></label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your fuel delivery needs..." required></textarea>
-              <span class="error-message" id="messageError" aria-live="polite"></span>
+              <label for="phone">Best Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+            </div>
+            <div class="form-group">
+              <label for="message">How can we help? <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us what you need — we'll handle the rest." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">
               <span>Send Message</span>

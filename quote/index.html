@@ -90,7 +90,7 @@
         <span class="eyebrow">Get Your Quote</span>
         <h2 class="section-title">Quick Quote Request</h2>
         <div class="section-underline"></div>
-        <p class="section-subtitle">Transparent pricing. No hidden fees. The quote is the invoice.</p>
+        <p class="section-subtitle">Tell us what you need. We'll call you back with a price &mdash; usually within an hour.</p>
       </div>
 
       <div class="schedule-form-wrapper fade-in">
@@ -99,68 +99,17 @@
           <input type="hidden" name="form_type" value="Quote Request">
           <input type="hidden" name="_next" value="https://thefuelguysdiesel.com/thank-you/quote/">
 
-          <h3 class="form-section-title"><i class="fas fa-user"></i> Contact Info</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name <span class="required">*</span></label>
-              <input type="text" id="name" name="name" placeholder="John Smith" required>
-            </div>
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="ABC Construction (optional)">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email <span class="required">*</span></label>
-              <input type="email" id="email" name="email" placeholder="john@company.com" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone <span class="required">*</span></label>
-              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-            </div>
-          </div>
-
-          <h3 class="form-section-title"><i class="fas fa-gas-pump"></i> Quote Details</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fuel_type">Fuel Type <span class="required">*</span></label>
-              <select id="fuel_type" name="fuel_type" required>
-                <option value="" disabled selected>Select fuel type</option>
-                <option value="diesel-clear">Clear Diesel (ULSD)</option>
-                <option value="diesel-dyed">Dyed / Red Diesel (Off-road)</option>
-                <option value="def">DEF (Diesel Exhaust Fluid)</option>
-                <option value="bulk">Bulk Fuel</option>
-                <option value="multiple">Multiple types</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="quantity">Estimated Quantity (gallons) <span class="required">*</span></label>
-              <input type="text" id="quantity" name="quantity" placeholder="e.g. 250" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="frequency">Delivery Frequency</label>
-              <select id="frequency" name="frequency">
-                <option value="" disabled selected>Select frequency</option>
-                <option value="one-time">One-time delivery</option>
-                <option value="weekly">Weekly</option>
-                <option value="biweekly">Bi-weekly</option>
-                <option value="monthly">Monthly</option>
-                <option value="as-needed">As needed / on-call</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="delivery_zip">Delivery Zip Code <span class="required">*</span></label>
-              <input type="text" id="delivery_zip" name="delivery_zip" placeholder="80202" required>
-            </div>
-          </div>
-
           <div class="form-group">
-            <label for="message">Notes</label>
-            <textarea id="message" name="message" rows="3" placeholder="Anything else we should know? (optional)"></textarea>
+            <label for="name">Your Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="First and last name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Best Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+          </div>
+          <div class="form-group">
+            <label for="message">What do you need? <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="3" placeholder="e.g. 300 gallons of clear diesel to a job site in Aurora" required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary btn-block">
@@ -169,8 +118,17 @@
           </button>
           <p class="form-fineprint">
             <i class="fas fa-shield-alt"></i>
-            Free, no-obligation quote. The price you see is the price you pay.
+            We'll call you back to discuss details and pricing. No obligation.
           </p>
+
+          <div class="form-success" id="formSuccess" role="alert" aria-live="assertive">
+            <i class="fas fa-check-circle"></i>
+            <p><strong>Got it!</strong> We'll call you back shortly with your quote.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
         </form>
       </div>
     </div>
