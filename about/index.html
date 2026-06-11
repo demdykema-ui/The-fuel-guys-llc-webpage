@@ -308,6 +308,70 @@
         gap: 30px;
       }
     }
+
+    .about-story-image-wrapper .photo-footnote {
+      margin-top: 34px;
+    }
+
+    /* --- Meet Freya --- */
+    .freya-section {
+      background: var(--cream);
+    }
+
+    .freya-card {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 50px;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .freya-photo img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #d4a017;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .freya-text h2 {
+      font-family: var(--display);
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .freya-text p {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .freya-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .freya-photo {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .freya-photo img {
+        height: 360px;
+      }
+
+      .freya-text {
+        text-align: center;
+      }
+
+      .freya-text .section-underline {
+        margin: 0 auto 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -361,8 +425,9 @@
       </div>
       <div class="about-story-visual fade-in">
         <div class="about-story-image-wrapper">
-          <img src="/pexels-gera-cejas-3616330-30844004.jpg" alt="Professional fuel delivery operations" loading="lazy">
+          <img src="/preview-11.webp" alt="One of our partners inspecting the first fuel tank The Fuel Guys ever purchased" loading="lazy">
           <div class="about-story-image-accent"></div>
+          <p class="photo-footnote"><i class="fas fa-map-marker-alt"></i> Our first tank &mdash; a proud day for the whole crew</p>
         </div>
       </div>
     </div>
@@ -378,6 +443,25 @@
       <div class="stat-item">
         <div class="stat-number" style="font-size: 1.8rem;">On-Time</div>
         <div class="stat-label">Every Call</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEET FREYA ===== -->
+  <section class="section freya-section fade-in">
+    <div class="container">
+      <div class="freya-card">
+        <div class="freya-photo">
+          <img src="/preview-13.webp" alt="Freya the kitten riding on the dashboard of The Fuel Guys truck" loading="lazy">
+        </div>
+        <div class="freya-text">
+          <span class="eyebrow">Meet the Crew</span>
+          <h2>Freya, Chief Morale Officer</h2>
+          <div class="section-underline left"></div>
+          <p>Every crew has a boss &mdash; ours has whiskers. Freya was rescued by one of our founders and his fianc&eacute;e, and she's been riding shotgun to job sites since she was just two and a half weeks old. Now two months in, she runs the truck, the house, and the schedule.</p>
+          <p>If you spot a black-and-white kitten supervising from the dashboard, rest easy &mdash; your delivery is in good paws.</p>
+          <p class="photo-footnote" style="justify-content: flex-start;"><i class="fas fa-map-marker-alt"></i> En route to a delivery &mdash; Denver, CO</p>
+        </div>
       </div>
     </div>
   </section>
