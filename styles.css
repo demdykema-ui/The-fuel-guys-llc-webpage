@@ -1947,6 +1947,27 @@ img {
   transform: translateY(-3px);
 }
 
+.footer-bbb {
+  margin-top: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer-bbb:hover {
+  opacity: 1;
+}
+
+.footer-bbb img {
+  height: 38px;
+  width: auto;
+  filter: grayscale(1) brightness(1.8);
+  transition: filter 0.3s ease;
+}
+
+.footer-bbb:hover img {
+  filter: grayscale(0) brightness(1);
+}
+
 .footer-links h4,
 .footer-contact h4 {
   font-family: 'Montserrat', sans-serif;
