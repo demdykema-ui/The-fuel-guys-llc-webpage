@@ -769,6 +769,73 @@ img {
   color: var(--accent);
 }
 
+/* Full-photo feature — shows a portrait job photo uncropped beside context text */
+.photo-feature-section {
+  background: var(--light-gray);
+}
+
+.photo-feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+
+.photo-feature-img {
+  flex: 0 1 360px;
+  min-width: 260px;
+}
+
+.photo-feature-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  border: 3px solid var(--accent);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.18);
+}
+
+.photo-feature-text {
+  flex: 1 1 320px;
+  max-width: 440px;
+}
+
+.photo-feature-text h3 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.photo-feature-text p {
+  font-size: 0.98rem;
+  color: var(--text-light);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .photo-feature {
+    gap: 30px;
+    padding: 48px 20px;
+    text-align: center;
+  }
+
+  .photo-feature-img {
+    flex-basis: 300px;
+  }
+
+  .photo-feature-text .photo-footnote {
+    justify-content: center !important;
+  }
+}
+
 /* Location footnote under standalone photos */
 .photo-footnote {
   display: flex;
