@@ -1,46 +1,56 @@
-# Blog Go-Live Checklist (Step 4)
+# Blog Go-Live Checklist (Step 4) — EXECUTED 2026-07-10
 
-Single source of truth for launching the blog. Work through every item, in
-order, when Post #1 is approved and ready. Keep this file updated as steps
-complete or the plan changes.
+Post #1 published: `/blog/diesel-delivery-cost-denver/` (pricing post, per owner
+decision — zero permission dependencies). The CES Power broadcast case study
+becomes a later post; its gates below still apply when it publishes.
 
-## Pre-flight gates (before anything below)
+## Launch toggles — DONE 2026-07-10
 
-- [ ] **Written permission from Sam at CES Power on file** for the broadcast
-      case study (Post #1).
-- [ ] **No Ball Arena / NHL naming** unless that permission explicitly covers it.
-- [ ] Post framed as "AFP + The Fuel Guys"; event leads route to AFP per the
-      agreement with Justin.
+1. [x] Post #1 built from `/blog/_template/` → `/blog/diesel-delivery-cost-denver/`
+       (noindex deleted, all tokens filled, FAQ schema 1:1 with visible FAQs).
+2. [x] `noindex` removed from `/blog/index.html`.
+3. [x] Post card added to the `/blog/index.html` grid.
+4. [x] Blog nav item enabled on all pages (22 files, incl. template and 404).
+5. [x] Internal links: 3 pricing links live (homepage under services grid,
+       services page ×2). Emergency (×2: homepage card + services), broadcast
+       banner (homepage), and pump-outs links remain commented — their target
+       posts are unpublished. Uncomment each when its post ships.
+6. [x] `sitemap.xml`: `/blog/` + post URL added (lastmod 2026-07-10).
+7. [x] `blog/feed.xml`: first `<item>` added.
+8. [x] `/blog/sample-post/` deleted.
+9. [x] 404 page Blog button enabled.
 
-## Launch toggles
-
-1. [ ] Build Post #1 from `/blog/_template/` → `/blog/<slug>/`
-       (follow the checklist comment at the top of the template; DELETE the
-       noindex line in the copy).
-2. [ ] Remove `<meta name="robots" content="noindex, follow">` from
-       `/blog/index.html` (marked with a `REMOVE noindex` comment).
-3. [ ] Add Post #1's card to the `/blog/index.html` grid (commented example
-       card is in the file).
-4. [ ] Enable the Blog nav item on ALL pages: search the repo for
-       `ENABLE at Step 4 go-live` and uncomment every match
-       (19 pages + blog index + template + 404 page).
-5. [ ] Uncomment the internal links: search the repo for `STEP 4 LINK`
-       (homepage ×3, services ×3, pump-outs ×1) — only uncomment the ones
-       whose target post is actually live; leave the rest for later posts.
-6. [ ] `sitemap.xml`: add `https://thefuelguysdiesel.com/blog/` and
-       `https://thefuelguysdiesel.com/blog/<slug>/` with `<lastmod>`.
-7. [ ] `blog/feed.xml`: add the first `<item>` (template is in the feed's
-       maintenance comment).
-8. [ ] DELETE `/blog/sample-post/` entirely.
-9. [ ] Commit, push, verify Pages deploy succeeds.
-
-## Post-launch (same day)
+## Post-launch (do these once deployed)
 
 - [ ] Submit `sitemap.xml` in Google Search Console; request indexing of
-      `/blog/` and the post URL.
-- [ ] Verify live: post renders, JSON-LD passes Google's Rich Results Test,
-      noindex gone from blog index, nav shows Blog on every page.
-- [ ] Spot-check `robots.txt` still allows everything except `/blog/_template/`.
+      `/blog/` and `/blog/diesel-delivery-cost-denver/`.
+- [ ] Verify live: post renders, JSON-LD passes Google's Rich Results Test.
+
+## MAINTENANCE — pricing post
+
+**Review `/blog/diesel-delivery-cost-denver/` ranges MONTHLY.** When updating:
+1. Update the numbers in the Quick Answer, the table, and the body copy.
+2. Update the visible "Prices last reviewed: <Month Year>" line under the byline.
+3. Update `dateModified` in the BlogPosting schema AND the visible
+   "Updated" `<time>` in the byline (both the `datetime` attr and display text).
+4. Update `<lastmod>` for the post in `sitemap.xml`.
+
+## Publishing the next post (repeat per post)
+
+1. Copy `/blog/_template/` → `/blog/<slug>/`; follow the token checklist in the
+   template header; DELETE the noindex line.
+2. Add the post's card to `/blog/index.html` (newest first).
+3. Add URL + lastmod to `sitemap.xml`; add `<item>` to `blog/feed.xml` (newest first).
+4. Uncomment any `STEP 4 LINK` comments that target the new post
+   (search the repo for the slug).
+5. Replace one "Coming soon" related-post card on existing posts with the new post.
+
+## Gates for the CES Power broadcast case study (when it publishes)
+
+- [ ] Written permission from Sam at CES Power on file.
+- [ ] No Ball Arena / NHL naming unless that permission explicitly covers it.
+- [ ] Framed as "AFP + The Fuel Guys"; event leads route to AFP per the
+      agreement with Justin.
 
 ## Standing rules (never toggle these)
 
