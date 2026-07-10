@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  MAINTENANCE: every new blog post = one new <item> inside <channel>, newest first:
+
+  <item>
+    <title>POST TITLE (the H1 question)</title>
+    <link>https://thefuelguysdiesel.com/blog/SLUG/</link>
+    <description>The post's Quick Answer text.</description>
+    <pubDate>Wed, 15 Jul 2026 09:00:00 -0600</pubDate>
+    <guid isPermaLink="true">https://thefuelguysdiesel.com/blog/SLUG/</guid>
+  </item>
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Fuel Guys Blog</title>
+    <link>https://thefuelguysdiesel.com/blog/</link>
+    <description>Straight answers about mobile diesel delivery in Denver: dyed vs. clear diesel rules, DEF, generator refueling, costs, and emergency fuel service.</description>
+    <language>en-us</language>
+    <atom:link href="https://thefuelguysdiesel.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  </channel>
+</rss>

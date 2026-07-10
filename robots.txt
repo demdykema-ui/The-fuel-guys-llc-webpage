@@ -1,0 +1,8 @@
+# thefuelguysdiesel.com — all crawlers welcome, including AI crawlers
+# (GPTBot, OAI-SearchBot, ClaudeBot, Claude-SearchBot, PerplexityBot,
+# Google-Extended, Bingbot are all covered by the * allow below).
+User-agent: *
+Allow: /
+Disallow: /blog/_template/
+
+Sitemap: https://thefuelguysdiesel.com/sitemap.xml
