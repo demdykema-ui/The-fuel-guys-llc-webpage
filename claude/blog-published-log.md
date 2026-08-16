@@ -7,7 +7,7 @@ day's assigned topic.
 | Day | Date | Slug | Status |
 |---|---|---|---|
 | 1 | 2026-08-04 | diesel-storage-permit-denver-job-site | Live — in repo + sitemap |
-| 2 | 2026-08-05 | excavator-fuel-consumption-per-hour | Delivered — awaiting upload |
+| 2 | 2026-08-05 | excavator-fuel-consumption-per-hour | Live — in repo + sitemap |
 | 3 | 2026-08-06 | wet-hosing-vs-job-site-fuel-tank | Live — in repo + sitemap |
 | 4 | 2026-08-07 | job-site-diesel-theft-prevention-denver | Live — in repo + sitemap |
 | 5 | 2026-08-10 | def-shelf-life-hot-weather | Live — in repo + sitemap |
@@ -45,7 +45,7 @@ day's assigned topic.
 3. RESOLVED 2026-08-16 (see maintenance note): Day 1 SPCC motive-power
    sentence corrected.
 4. Upload backlog (updated 2026-08-16): Days 4, 5 and 10 published. Still
-   awaiting files: Days 2, 6, 7, 8, 9. The post files have not reached the publishing session — they
+   awaiting files: Days 6, 7, 8, 9 (Day 2 published 2026-08-16). The post files have not reached the publishing session — they
    must be attached to the Claude Code chat (the cloud session cannot read
    the owner's local Downloads folder). This is the only thing limiting the
    project.
