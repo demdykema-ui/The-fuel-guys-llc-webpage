@@ -9,13 +9,13 @@ day's assigned topic.
 | 1 | 2026-08-04 | diesel-storage-permit-denver-job-site | Live — in repo + sitemap |
 | 2 | 2026-08-05 | excavator-fuel-consumption-per-hour | Delivered — awaiting upload |
 | 3 | 2026-08-06 | wet-hosing-vs-job-site-fuel-tank | Live — in repo + sitemap |
-| 4 | 2026-08-07 | job-site-diesel-theft-prevention-denver | Delivered — awaiting upload |
-| 5 | 2026-08-10 | def-shelf-life-hot-weather | Delivered — awaiting upload |
+| 4 | 2026-08-07 | job-site-diesel-theft-prevention-denver | Live — in repo + sitemap |
+| 5 | 2026-08-10 | def-shelf-life-hot-weather | Live — in repo + sitemap |
 | 6 | 2026-08-11 | generator-runtime-full-tank | Delivered — awaiting upload |
 | 7 | 2026-08-12 | generator-ran-out-of-fuel-outage | Delivered — awaiting upload |
 | 8 | 2026-08-13 | nfpa-110-generator-fuel-load-test | Delivered — awaiting upload |
 | 9 | 2026-08-14 | 24-7-emergency-fuel-delivery-denver | Delivered — awaiting upload |
-| 10 | 2026-08-17 | job-site-diesel-tank-size | Delivered — awaiting upload |
+| 10 | 2026-08-17 | job-site-diesel-tank-size | Live — in repo + sitemap |
 
 ## Notes
 
@@ -43,8 +43,8 @@ day's assigned topic.
    corrected against primary sources.
 3. RESOLVED 2026-08-16 (see maintenance note): Day 1 SPCC motive-power
    sentence corrected.
-4. Upload backlog: Days 2, 4, 5, 6, 7, 8, 9, 10 delivered but not yet
-   uploaded. The post files have not reached the publishing session — they
+4. Upload backlog (updated 2026-08-16): Days 4, 5 and 10 published. Still
+   awaiting files: Days 2, 6, 7, 8, 9. The post files have not reached the publishing session — they
    must be attached to the Claude Code chat (the cloud session cannot read
    the owner's local Downloads folder). This is the only thing limiting the
    project.
@@ -75,3 +75,13 @@ day's assigned topic.
   cards, og/twitter descriptions, highlight, and CTA. Fineprint added noting
   certain Colorado per-gallon fees (SB21-260 road usage / bridge & tunnel)
   may still apply to dyed fuel; last reviewed August 2026.
+
+## Maintenance applied 2026-08-16 (second pass)
+
+- Days 4, 5, 10 published (files received via chat). All three passed the
+  standard pre-publish verification. Hero declarations corrected on Days 4
+  and 5 (1200x800 -> 1920x1440 actual) per open item 6; Day 10 was already
+  correct. The fourth uploaded file was a duplicate of the live Day 3 post
+  and was skipped.
+- Day 10 published Sun Aug 16 carrying its assigned calendar date of
+  Mon Aug 17 per its production note.

@@ -18,6 +18,27 @@
     <language>en-us</language>
     <atom:link href="https://thefuelguysdiesel.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>How Much Diesel Should You Keep on a Job Site?</title>
+      <link>https://thefuelguysdiesel.com/blog/job-site-diesel-tank-size/</link>
+      <description>Size the tank to your burn, not to the biggest one the rental yard has. Multiply your daily fuel use by the days between deliveries and add one day of reserve. Then check that number against four thresholds - 60 gallons, 660, 1,100 and 1,320 - because each one adds a rule.</description>
+      <pubDate>Mon, 17 Aug 2026 09:00:00 -0600</pubDate>
+      <guid isPermaLink="true">https://thefuelguysdiesel.com/blog/job-site-diesel-tank-size/</guid>
+    </item>
+    <item>
+      <title>Why Does DEF Go Bad in Summer Heat?</title>
+      <link>https://thefuelguysdiesel.com/blog/def-shelf-life-hot-weather/</link>
+      <description>Heat breaks urea down into ammonia, and DEF's 32.5% urea concentration drifts below the ISO 22241 minimum. Shelf life is set by storage temperature, not the calendar: 12 months at 86F, 6 months at 95F, and above 95F every batch should be tested before use.</description>
+      <pubDate>Mon, 10 Aug 2026 09:00:00 -0600</pubDate>
+      <guid isPermaLink="true">https://thefuelguysdiesel.com/blog/def-shelf-life-hot-weather/</guid>
+    </item>
+    <item>
+      <title>How Do You Stop Diesel Theft on a Denver Job Site?</title>
+      <link>https://thefuelguysdiesel.com/blog/job-site-diesel-theft-prevention-denver/</link>
+      <description>You stop job-site diesel theft by removing the target and controlling the paperwork. Lock and fence the tank, meter every gallon in and out, reconcile fuel against machine hours weekly, and keep less fuel on site by scheduling deliveries closer to burn. Cameras help only if someone is assigned to review the footage.</description>
+      <pubDate>Fri, 07 Aug 2026 09:00:00 -0600</pubDate>
+      <guid isPermaLink="true">https://thefuelguysdiesel.com/blog/job-site-diesel-theft-prevention-denver/</guid>
+    </item>
+    <item>
       <title>What Is Wet Hosing, and Is It Cheaper Than a Job-Site Tank?</title>
       <link>https://thefuelguysdiesel.com/blog/wet-hosing-vs-job-site-fuel-tank/</link>
       <description>Wet hosing is direct-to-equipment fueling: a fuel truck comes to your site and fills each machine from the hose, usually overnight. It is cheaper than a job-site tank when your burn is modest or the job is short, because you pay for fuel and delivery only: no tank, no fire permit, no spill plan, no crew time spent fueling.</description>
