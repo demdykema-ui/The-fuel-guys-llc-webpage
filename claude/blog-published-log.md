@@ -14,7 +14,7 @@ day's assigned topic.
 | 6 | 2026-08-11 | generator-runtime-full-tank | Live — in repo + sitemap |
 | 7 | 2026-08-12 | generator-ran-out-of-fuel-outage | Live — in repo + sitemap |
 | 8 | 2026-08-13 | nfpa-110-generator-fuel-load-test | Live — in repo + sitemap |
-| 9 | 2026-08-14 | 24-7-emergency-fuel-delivery-denver | Delivered — awaiting upload |
+| 9 | 2026-08-14 | 24-7-emergency-fuel-delivery-denver | Live — in repo + sitemap |
 | 10 | 2026-08-17 | job-site-diesel-tank-size | Live — in repo + sitemap |
 | 11 | 2026-08-18 | dyed-diesel-pickup-truck-penalty | Delivered 2026-08-16 — awaiting upload on publish date |
 
@@ -44,10 +44,11 @@ day's assigned topic.
    corrected against primary sources.
 3. RESOLVED 2026-08-16 (see maintenance note): Day 1 SPCC motive-power
    sentence corrected.
-4. Upload backlog (updated 2026-08-16): Days 4, 5 and 10 published. Still
-   awaiting files: Day 9 only (Days 2, 6, 7, 8 published 2026-08-16).
-   Per-file fixes on placement: Day 6 hero alt and Day 8 figcaption
-   de-identified per the venue policy; Day 7 hero dims corrected. The post files have not reached the publishing session — they
+4. Upload backlog (updated 2026-08-16): Days 4, 5 and 10 published. CLEARED 2026-08-16: all ten produced days are live (Days 2, 4, 5, 6, 7,
+   8, 9, 10 published 2026-08-16). Per-file fixes on placement: Day 6 hero
+   alt and Day 8 figcaption de-identified per the venue policy; Days 4, 5,
+   7 hero dims corrected. Day 11 remains delivered-not-published, holding
+   for Tue Aug 18. The post files have not reached the publishing session — they
    must be attached to the Claude Code chat (the cloud session cannot read
    the owner's local Downloads folder). This is the only thing limiting the
    project.
