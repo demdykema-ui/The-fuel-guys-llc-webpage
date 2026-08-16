@@ -16,6 +16,7 @@ day's assigned topic.
 | 8 | 2026-08-13 | nfpa-110-generator-fuel-load-test | Delivered — awaiting upload |
 | 9 | 2026-08-14 | 24-7-emergency-fuel-delivery-denver | Delivered — awaiting upload |
 | 10 | 2026-08-17 | job-site-diesel-tank-size | Live — in repo + sitemap |
+| 11 | 2026-08-18 | dyed-diesel-pickup-truck-penalty | Delivered 2026-08-16 — awaiting upload on publish date |
 
 ## Notes
 
@@ -85,3 +86,17 @@ day's assigned topic.
   and was skipped.
 - Day 10 published Sun Aug 16 carrying its assigned calendar date of
   Mon Aug 17 per its production note.
+
+## Day 11 production note (2026-08-16)
+
+Produced per the standing spec. Denver & Colorado, target query "dyed diesel
+pickup truck penalty", 6 min read, hero /tfg-crew-trucks.jpg at real
+1920x1440. All pre-delivery checks passed programmatically. Links per the
+calendar plan: /red-dye-diesel/ and /red-dye-diesel/tax-savings/ (accuracy
+flag resolved 2026-08-16, safe to link), Day 1 and Day 10 in body and
+related cards. Deliberately withheld: fuel price, enforcement-frequency
+claims. Key sources: 26 U.S.C. 6715, IRS Pub 510 (12/2025), Colorado DOR
+Dyed Diesel page (state infraction schedule $500/$1,000/$5,000 + surcharges),
+C.R.S. 39-27-103. Do NOT publish before Tue Aug 18 — the file carries that
+date; if it slips, change the date in five places per the instructions.
+Next run takes Day 12 (Wed Aug 19) per the calendar.
