@@ -12,7 +12,7 @@ day's assigned topic.
 | 4 | 2026-08-07 | job-site-diesel-theft-prevention-denver | Live — in repo + sitemap |
 | 5 | 2026-08-10 | def-shelf-life-hot-weather | Live — in repo + sitemap |
 | 6 | 2026-08-11 | generator-runtime-full-tank | Live — in repo + sitemap |
-| 7 | 2026-08-12 | generator-ran-out-of-fuel-outage | Delivered — awaiting upload |
+| 7 | 2026-08-12 | generator-ran-out-of-fuel-outage | Live — in repo + sitemap |
 | 8 | 2026-08-13 | nfpa-110-generator-fuel-load-test | Delivered — awaiting upload |
 | 9 | 2026-08-14 | 24-7-emergency-fuel-delivery-denver | Delivered — awaiting upload |
 | 10 | 2026-08-17 | job-site-diesel-tank-size | Live — in repo + sitemap |
@@ -45,8 +45,9 @@ day's assigned topic.
 3. RESOLVED 2026-08-16 (see maintenance note): Day 1 SPCC motive-power
    sentence corrected.
 4. Upload backlog (updated 2026-08-16): Days 4, 5 and 10 published. Still
-   awaiting files: Days 7, 8, 9 (Days 2 and 6 published 2026-08-16; Day 6
-   hero alt de-identified per the site-wide venue policy). The post files have not reached the publishing session — they
+   awaiting files: Days 8, 9 (Days 2, 6, 7 published 2026-08-16; Day 6 hero
+   alt de-identified per the site-wide venue policy; Day 7 hero dims
+   corrected to 1200x1600). The post files have not reached the publishing session — they
    must be attached to the Claude Code chat (the cloud session cannot read
    the owner's local Downloads folder). This is the only thing limiting the
    project.
